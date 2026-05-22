@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Instagram } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -7,57 +8,60 @@ import LanguageSwitcher from './LanguageSwitcher';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useLanguage();
+  const location = useLocation();
 
   const navItems = [
-    { key: 'nav.home', href: '#home' },
-    { key: 'nav.story', href: '#story' },
-    { key: 'nav.retreats', href: '#retreats' },
-    { key: 'nav.tips', href: '#tips' },
-    { key: 'nav.contact', href: '#contact' },
+    { key: 'nav.home', to: '/' },
+    { key: 'nav.story', to: '/nossa-historia' },
+    { key: 'nav.retreats', to: '/refugios' },
+    { key: 'nav.tips', to: '/dicas' },
+    { key: 'nav.contact', to: '/contato' },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsMenuOpen(false);
-  };
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-accent/20">
+    <header className="sticky top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-accent/20">
       <div className="container-luxury">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a 
-            href="#home" 
-            onClick={(e) => { e.preventDefault(); scrollToSection('#home'); }}
-            className="flex items-center gap-2"
-          >
+          <Link to="/" onClick={closeMenu} className="flex items-center gap-2">
             <span className="font-display text-xl md:text-2xl font-semibold text-primary">
               Porto Betarello
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
-              <a
+              <NavLink
                 key={item.key}
-                href={item.href}
-                onClick={(e) => { e.preventDefault(); scrollToSection(item.href); }}
-                className="font-body text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200 relative group"
+                to={item.to}
+                end={item.to === '/'}
+                className={({ isActive }) =>
+                  `font-body text-sm font-medium transition-colors duration-200 relative group ${
+                    isActive ? 'text-primary' : 'text-muted-foreground hover:text-primary'
+                  }`
+                }
               >
-                {t(item.key)}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
-              </a>
+                {({ isActive }) => (
+                  <>
+                    {t(item.key)}
+                    <span
+                      className={`absolute -bottom-1 left-0 h-0.5 bg-accent transition-all duration-300 ${
+                        isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                      }`}
+                    />
+                  </>
+                )}
+              </NavLink>
             ))}
           </nav>
 
           {/* Right Side */}
           <div className="flex items-center gap-4">
             <a
-              href="https://instagram.com/portobetarello"
+              href="https://instagram.com/porto_betarello"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:flex items-center justify-center w-9 h-9 rounded-full bg-muted hover:bg-accent/20 transition-colors"
@@ -65,10 +69,9 @@ const Header = () => {
             >
               <Instagram className="w-4 h-4 text-primary" />
             </a>
-            
+
             <LanguageSwitcher />
 
-            {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg hover:bg-muted transition-colors"
@@ -96,20 +99,28 @@ const Header = () => {
           >
             <nav className="container-luxury py-6 flex flex-col gap-4">
               {navItems.map((item, index) => (
-                <motion.a
+                <motion.div
                   key={item.key}
-                  href={item.href}
-                  onClick={(e) => { e.preventDefault(); scrollToSection(item.href); }}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="font-body text-base font-medium text-muted-foreground hover:text-primary py-2 border-b border-muted last:border-b-0"
                 >
-                  {t(item.key)}
-                </motion.a>
+                  <NavLink
+                    to={item.to}
+                    end={item.to === '/'}
+                    onClick={closeMenu}
+                    className={({ isActive }) =>
+                      `block font-body text-base font-medium py-2 border-b border-muted last:border-b-0 ${
+                        isActive ? 'text-primary' : 'text-muted-foreground hover:text-primary'
+                      }`
+                    }
+                  >
+                    {t(item.key)}
+                  </NavLink>
+                </motion.div>
               ))}
               <motion.a
-                href="https://instagram.com/portobetarello"
+                href="https://instagram.com/porto_betarello"
                 target="_blank"
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, x: -20 }}

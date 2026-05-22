@@ -7,11 +7,10 @@ const WhatsAppIcon = () => (
   </svg>
 );
 
-
 const WhatsAppButton = () => {
   const { t } = useLanguage();
-  
-  const phoneNumber = '5548999999999';
+
+  const phoneNumber = '5519999169958';
   const message = encodeURIComponent(t('whatsapp.message'));
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
@@ -29,8 +28,6 @@ const WhatsAppButton = () => {
       aria-label="WhatsApp"
     >
       <WhatsAppIcon />
-      
-      {/* Pulse Animation */}
       <span className="absolute w-full h-full rounded-full bg-[#25D366] animate-ping opacity-20" />
     </motion.a>
   );
