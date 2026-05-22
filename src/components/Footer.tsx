@@ -19,21 +19,28 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="text-center">
-            <h4 className="font-display text-lg font-semibold mb-4">Contato</h4>
+            <h4 className="font-display text-lg font-semibold mb-4">{t('nav.contact')}</h4>
             <div className="space-y-3">
               <a
-                href="mailto:contato@portobetarello.com.br"
+                href="mailto:portobetarello@gmail.com"
                 className="flex items-center justify-center gap-2 font-body text-sm text-primary-foreground/80 hover:text-accent transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                contato@portobetarello.com.br
+                portobetarello@gmail.com
               </a>
               <a
-                href="tel:+5548999999999"
+                href="tel:+5519999169958"
                 className="flex items-center justify-center gap-2 font-body text-sm text-primary-foreground/80 hover:text-accent transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                +55 (48) 99999-9999
+                +55 (19) 99916-9958
+              </a>
+              <a
+                href="tel:+12163370184"
+                className="flex items-center justify-center gap-2 font-body text-sm text-primary-foreground/80 hover:text-accent transition-colors"
+              >
+                <Phone className="w-4 h-4" />
+                +1 (216) 337-0184
               </a>
             </div>
           </div>
@@ -42,18 +49,17 @@ const Footer = () => {
           <div className="text-center md:text-right">
             <h4 className="font-display text-lg font-semibold mb-4">Social</h4>
             <a
-              href="https://instagram.com/portobetarello"
+              href="https://instagram.com/porto_betarello"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 font-body text-sm text-primary-foreground/80 hover:text-accent transition-colors"
             >
               <Instagram className="w-5 h-5" />
-              @portobetarello
+              @porto_betarello
             </a>
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="border-t border-primary-foreground/20 pt-8">
           <p className="font-body text-xs text-primary-foreground/60 text-center">
             {t('footer.rights')}
