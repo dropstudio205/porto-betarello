@@ -1,19 +1,69 @@
 import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
+import { Bed, Bath, MapPin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import Properties from '@/components/Properties';
+import { Button } from '@/components/ui/button';
+import heroBg from '@/assets/hero-bg.jpg';
+import property1 from '@/assets/property-1.jpg';
+import property2 from '@/assets/property-2.jpg';
+import property3 from '@/assets/property-3.jpg';
+import property4 from '@/assets/property-4.jpg';
+import gallery1 from '@/assets/gallery-1.jpg';
 
 const Refugios = () => {
   const { language } = useLanguage();
+
   const seo = {
     pt: {
-      title: 'Refúgios | Porto Betarello',
-      description: 'Conheça nossos refúgios de luxo em Florianópolis, Praia do Rosa e São Paulo.',
+      title: 'Refúgios em Palhoça, Florianópolis e Amparo | Porto Betarello',
+      description:
+        'Alugue casas e refúgios exclusivos em Palhoça SC, Florianópolis e Amparo SP. Experiência estilo Airbnb, conforto e praticidade.',
     },
     en: {
-      title: 'Retreats | Porto Betarello',
-      description: 'Discover our luxury retreats in Florianópolis, Rosa Beach and São Paulo.',
+      title: 'Retreats in Palhoça, Florianópolis and Amparo | Porto Betarello',
+      description:
+        'Rent exclusive homes and retreats in Palhoça SC, Florianópolis and Amparo SP. Airbnb-style stays with comfort and ease.',
     },
   }[language];
+
+  const properties = [
+    {
+      image: property1,
+      name: 'Morada Da Cachoeira',
+      location: 'Florianópolis, SC',
+      rooms: 1,
+      baths: 1,
+      featured: true,
+    },
+    {
+      image: property2,
+      name: 'Morada do Sol',
+      location: 'Palhoça, SC',
+      rooms: 2,
+      baths: 1,
+    },
+    {
+      image: property3,
+      name: 'Morada do Mar',
+      location: 'Palhoça, SC',
+      rooms: 2,
+      baths: 4,
+    },
+    {
+      image: property4,
+      name: 'House do Interior',
+      location: 'Amparo, SP',
+      rooms: 3,
+      baths: 1,
+    },
+    {
+      image: gallery1,
+      name: 'Casarão Centenário em Amparo',
+      location: 'Amparo, SP',
+      rooms: 3,
+      baths: 2,
+    },
+  ];
 
   return (
     <>
@@ -25,9 +75,109 @@ const Refugios = () => {
         <meta property="og:description" content={seo.description} />
         <meta property="og:url" content="/refugios" />
       </Helmet>
-      <div className="pt-8">
-        <Properties />
-      </div>
+
+      {/* Page Hero */}
+      <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden mt-16">
+        <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-primary/50" />
+        <div className="relative z-10 container-luxury text-center text-primary-foreground max-w-3xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="h-px w-20 bg-gradient-to-r from-accent to-gold-light mx-auto mb-6" />
+            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+              Nossos Refúgios
+            </h1>
+            <p className="font-body text-lg md:text-xl text-primary-foreground/95 leading-relaxed">
+              Cada refúgio é cuidadosamente preparado para oferecer uma experiência única de conforto,
+              privacidade e conexão com a natureza.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Intro */}
+      <section className="py-24 bg-gradient-to-br from-muted/40 to-background">
+        <div className="container-luxury max-w-3xl text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-8 leading-tight">
+              Onde Cada Momento se Transforma em Memória
+            </h2>
+            <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
+              Nossa coleção de refúgios foi escolhida a dedo pela família Betarello. Cada propriedade
+              conta sua própria história e oferece uma experiência distinta, mas todas compartilham o
+              mesmo compromisso com excelência, aconchego e atenção aos detalhes que nos definem.
+            </p>
+            <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed italic">
+              De casas à beira-mar a refúgios nas montanhas, cada espaço foi pensado para
+              proporcionar descanso, reconexão e momentos inesquecíveis.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Properties Grid */}
+      <section className="py-20 md:py-24 bg-background">
+        <div className="container-luxury">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {properties.map((p, i) => (
+              <motion.article
+                key={p.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="group bg-card rounded-2xl overflow-hidden shadow-elegant hover:shadow-card transition-all duration-300 hover:-translate-y-2 flex flex-col"
+              >
+                {/* Image */}
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={p.image}
+                    alt={p.name}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  {p.featured && (
+                    <span className="absolute top-4 right-4 bg-accent text-accent-foreground px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider">
+                      DESTAQUE
+                    </span>
+                  )}
+                </div>
+
+                {/* Content */}
+                <div className="p-7 flex flex-col flex-1">
+                  <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-3">
+                    <MapPin className="w-3.5 h-3.5 text-primary" />
+                    <span>{p.location}</span>
+                  </div>
+                  <h3 className="font-display text-2xl font-bold text-primary mb-5">{p.name}</h3>
+
+                  <div className="mt-auto">
+                    <div className="flex gap-6 py-4 border-t border-border/40">
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <Bed className="w-4 h-4 text-accent" />
+                        {p.rooms} {p.rooms === 1 ? 'quarto' : 'quartos'}
+                      </div>
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <Bath className="w-4 h-4 text-accent" />
+                        {p.baths} {p.baths === 1 ? 'banheiro' : 'banheiros'}
+                      </div>
+                    </div>
+                    <Button className="w-full mt-2">Ver detalhes e reservar</Button>
+                  </div>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 };
