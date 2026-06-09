@@ -88,11 +88,12 @@ const Refugios = () => {
           >
             <div className="h-px w-20 bg-gradient-to-r from-accent to-gold-light mx-auto mb-6" />
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-              Nossos Refúgios
+              {language === 'pt' ? 'Nossos Refúgios' : 'Our Retreats'}
             </h1>
             <p className="font-body text-lg md:text-xl text-primary-foreground/95 leading-relaxed">
-              Cada refúgio é cuidadosamente preparado para oferecer uma experiência única de conforto,
-              privacidade e conexão com a natureza.
+              {language === 'pt'
+                ? 'Cada refúgio é cuidadosamente preparado para oferecer uma experiência única de conforto, privacidade e conexão com a natureza.'
+                : 'Each retreat is carefully prepared to offer a unique experience of comfort, privacy and connection with nature.'}
             </p>
           </motion.div>
         </div>
@@ -108,16 +109,19 @@ const Refugios = () => {
             transition={{ duration: 0.7 }}
           >
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-8 leading-tight">
-              Onde Cada Momento se Transforma em Memória
+              {language === 'pt'
+                ? 'Onde Cada Momento se Transforma em Memória'
+                : 'Where Every Moment Becomes a Memory'}
             </h2>
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
-              Nossa coleção de refúgios foi escolhida a dedo pela família Betarello. Cada propriedade
-              conta sua própria história e oferece uma experiência distinta, mas todas compartilham o
-              mesmo compromisso com excelência, aconchego e atenção aos detalhes que nos definem.
+              {language === 'pt'
+                ? 'Nossa coleção de refúgios foi escolhida a dedo pela família Betarello. Cada propriedade conta sua própria história e oferece uma experiência distinta, mas todas compartilham o mesmo compromisso com excelência, aconchego e atenção aos detalhes que nos definem.'
+                : 'Our collection of retreats was hand-picked by the Betarello family. Each property tells its own story and offers a distinct experience, but all share the same commitment to excellence, warmth and attention to detail that define us.'}
             </p>
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed italic">
-              De casas à beira-mar a refúgios nas montanhas, cada espaço foi pensado para
-              proporcionar descanso, reconexão e momentos inesquecíveis.
+              {language === 'pt'
+                ? 'De casas à beira-mar a refúgios nas montanhas, cada espaço foi pensado para proporcionar descanso, reconexão e momentos inesquecíveis.'
+                : 'From beachfront houses to mountain retreats, every space was designed to provide rest, reconnection and unforgettable moments.'}
             </p>
           </motion.div>
         </div>
@@ -136,7 +140,6 @@ const Refugios = () => {
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 className="group bg-card rounded-2xl overflow-hidden shadow-elegant hover:shadow-card transition-all duration-300 hover:-translate-y-2 flex flex-col"
               >
-                {/* Image */}
                 <div className="relative h-64 overflow-hidden">
                   <img
                     src={p.image}
@@ -146,12 +149,11 @@ const Refugios = () => {
                   />
                   {p.featured && (
                     <span className="absolute top-4 right-4 bg-accent text-accent-foreground px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider">
-                      DESTAQUE
+                      {language === 'pt' ? 'DESTAQUE' : 'FEATURED'}
                     </span>
                   )}
                 </div>
 
-                {/* Content */}
                 <div className="p-7 flex flex-col flex-1">
                   <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-3">
                     <MapPin className="w-3.5 h-3.5 text-primary" />
@@ -163,14 +165,22 @@ const Refugios = () => {
                     <div className="flex gap-6 py-4 border-t border-border/40">
                       <div className="flex items-center gap-2 text-sm text-muted-foreground">
                         <Bed className="w-4 h-4 text-accent" />
-                        {p.rooms} {p.rooms === 1 ? 'quarto' : 'quartos'}
+                        {p.rooms}{' '}
+                        {language === 'pt'
+                          ? p.rooms === 1 ? 'quarto' : 'quartos'
+                          : p.rooms === 1 ? 'bedroom' : 'bedrooms'}
                       </div>
                       <div className="flex items-center gap-2 text-sm text-muted-foreground">
                         <Bath className="w-4 h-4 text-accent" />
-                        {p.baths} {p.baths === 1 ? 'banheiro' : 'banheiros'}
+                        {p.baths}{' '}
+                        {language === 'pt'
+                          ? p.baths === 1 ? 'banheiro' : 'banheiros'
+                          : p.baths === 1 ? 'bathroom' : 'bathrooms'}
                       </div>
                     </div>
-                    <Button className="w-full mt-2">Ver detalhes e reservar</Button>
+                    <Button className="w-full mt-2">
+                      {language === 'pt' ? 'Ver detalhes e reservar' : 'View details and book'}
+                    </Button>
                   </div>
                 </div>
               </motion.article>
