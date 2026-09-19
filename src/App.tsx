@@ -9,6 +9,7 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import NossaHistoria from "./pages/NossaHistoria";
 import Refugios from "./pages/Refugios";
+import RetreatDetail from "./pages/RetreatDetail";
 import Dicas from "./pages/Dicas";
 import Contato from "./pages/Contato";
 import NotFound from "./pages/NotFound";
@@ -28,6 +29,7 @@ const App = () => (
                 <Route path="/" element={<Home />} />
                 <Route path="/nossa-historia" element={<NossaHistoria />} />
                 <Route path="/refugios" element={<Refugios />} />
+                <Route path="/refugios/:slug" element={<RetreatDetail />} />
                 <Route path="/dicas" element={<Dicas />} />
                 <Route path="/contato" element={<Contato />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

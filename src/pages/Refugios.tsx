@@ -1,14 +1,11 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Bed, Bath, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import heroBg from '@/assets/hero-bg.jpg';
-import property1 from '@/assets/property-1.jpg';
-import property2 from '@/assets/property-2.jpg';
-import property3 from '@/assets/property-3.jpg';
-import property4 from '@/assets/property-4.jpg';
-import gallery1 from '@/assets/gallery-1.jpg';
+import { retreats } from '@/data/retreats';
 
 const Refugios = () => {
   const { language } = useLanguage();
@@ -25,45 +22,6 @@ const Refugios = () => {
         'Rent exclusive homes and retreats in Palhoça SC, Florianópolis and Amparo SP. Airbnb-style stays with comfort and ease.',
     },
   }[language];
-
-  const properties = [
-    {
-      image: property1,
-      name: 'Morada Da Cachoeira',
-      location: 'Florianópolis, SC',
-      rooms: 1,
-      baths: 1,
-      featured: true,
-    },
-    {
-      image: property2,
-      name: 'Morada do Sol',
-      location: 'Palhoça, SC',
-      rooms: 2,
-      baths: 1,
-    },
-    {
-      image: property3,
-      name: 'Morada do Mar',
-      location: 'Palhoça, SC',
-      rooms: 2,
-      baths: 4,
-    },
-    {
-      image: property4,
-      name: 'House do Interior',
-      location: 'Amparo, SP',
-      rooms: 3,
-      baths: 1,
-    },
-    {
-      image: gallery1,
-      name: 'Casarão Centenário em Amparo',
-      location: 'Amparo, SP',
-      rooms: 3,
-      baths: 2,
-    },
-  ];
 
   return (
     <>
@@ -131,7 +89,7 @@ const Refugios = () => {
       <section className="py-20 md:py-24 bg-background">
         <div className="container-luxury">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {properties.map((p, i) => (
+            {retreats.map((p, i) => (
               <motion.article
                 key={p.name}
                 initial={{ opacity: 0, y: 30 }}
@@ -142,7 +100,7 @@ const Refugios = () => {
               >
                 <div className="relative h-64 overflow-hidden">
                   <img
-                    src={p.image}
+                    src={p.images[0]}
                     alt={p.name}
                     loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
@@ -178,8 +136,10 @@ const Refugios = () => {
                           : p.baths === 1 ? 'bathroom' : 'bathrooms'}
                       </div>
                     </div>
-                    <Button className="w-full mt-2">
-                      {language === 'pt' ? 'Ver detalhes e reservar' : 'View details and book'}
+                    <Button asChild className="w-full mt-2">
+                      <Link to={`/refugios/${p.slug}`}>
+                        {language === 'pt' ? 'Ver detalhes e reservar' : 'View details and book'}
+                      </Link>
                     </Button>
                   </div>
                 </div>
