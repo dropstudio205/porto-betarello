@@ -56,12 +56,6 @@ const Dicas = () => {
       food: { pt: 'Gastronomia', en: 'Gastronomy' },
       tourism: { pt: 'Turismo', en: 'Tourism' },
     },
-    shopTitle: { pt: 'Nossa Loja', en: 'Our Shop' },
-    shopSubtitle: {
-      pt: 'Produtos selecionados especialmente para complementar sua experiência em nossos refúgios.',
-      en: 'Products specially selected to complement your experience in our retreats.',
-    },
-    shopCta: { pt: 'Acessar Nossa Loja', en: 'Visit Our Shop' },
     wellnessBadge: { pt: 'PARCEIRA RECOMENDADA', en: 'RECOMMENDED PARTNER' },
     wellnessTitle: { pt: 'Renove Corpo e Mente', en: 'Renew Body and Mind' },
     wellnessP1: {
