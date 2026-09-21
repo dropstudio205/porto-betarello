@@ -15,6 +15,7 @@ export const translations: Translations = {
   'nav.story': { pt: 'Nossa História', en: 'Our Story' },
   'nav.retreats': { pt: 'Refúgios', en: 'Retreats' },
   'nav.tips': { pt: 'Dicas', en: 'Tips' },
+  'nav.shop': { pt: 'Shop', en: 'Shop' },
   'nav.contact': { pt: 'Contato', en: 'Contact' },
 
   // Hero
@@ -66,7 +67,7 @@ export const translations: Translations = {
 
   // Blog
   'blog.title': { pt: 'Blog Betarello', en: 'Betarello Blog' },
-  'blog.subtitle': { pt: 'Fique por dentro do nosso blog na Substack', en: 'Stay tuned to our Substack blog' },
+  'blog.subtitle': { pt: 'Histórias, memórias e curiosidades da família Betarello', en: 'Stories, memories and curiosities from the Betarello family' },
   'blog.post1.title': { pt: 'Arroz, feijão, moela e amor', en: 'Rice, beans, gizzard and love' },
   'blog.post1.desc': { pt: 'Há comidas que alimentam o corpo. E há aquelas que alimentam a história.', en: 'Some foods feed the body. Others feed the story.' },
   'blog.post2.title': { pt: 'Viajar também é um lugar dentro da mente', en: 'Traveling is also a place inside the mind' },
@@ -74,6 +75,9 @@ export const translations: Translations = {
   'blog.post3.title': { pt: 'Curiosidade Literária: As Raízes Reais de "Grande Sertão: Veredas"', en: 'Literary Curiosity: The Real Roots of "Grande Sertão: Veredas"' },
   'blog.post3.desc': { pt: 'Você sabia que o icônico romance Grande Sertão tem inspirações reais?', en: 'Did you know the iconic novel Grande Sertão has real-life roots?' },
   'blog.cta': { pt: 'Ver Blog no Substack', en: 'View blog on Substack' },
+  'shop.title': { pt: 'Nossa Loja', en: 'Our Shop' },
+  'shop.subtitle': { pt: 'Produtos selecionados especialmente para complementar sua experiência em nossos refúgios.', en: 'Products specially selected to complement your experience in our retreats.' },
+  'shop.cta': { pt: 'Acessar Nossa Loja', en: 'Visit Our Shop' },
 
   // Feedback
   'feedback.title': { pt: 'Feedback', en: 'Feedback' },

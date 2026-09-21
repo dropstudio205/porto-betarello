@@ -12,6 +12,8 @@ import Refugios from "./pages/Refugios";
 import RetreatDetail from "./pages/RetreatDetail";
 import Dicas from "./pages/Dicas";
 import Contato from "./pages/Contato";
+import Shop from "./pages/Shop";
+import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +33,8 @@ const App = () => (
                 <Route path="/refugios" element={<Refugios />} />
                 <Route path="/refugios/:slug" element={<RetreatDetail />} />
                 <Route path="/dicas" element={<Dicas />} />
+                <Route path="/shop" element={<Shop />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/contato" element={<Contato />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />

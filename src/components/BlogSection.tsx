@@ -1,16 +1,20 @@
+import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { BookOpen, ExternalLink } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Button } from './ui/button';
+import { blogPosts } from '@/data/posts';
 
 const BlogSection = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
+  const scrollRef = useRef<HTMLDivElement>(null);
 
-  const posts = [
-    { titleKey: 'blog.post1.title', descKey: 'blog.post1.desc' },
-    { titleKey: 'blog.post2.title', descKey: 'blog.post2.desc' },
-    { titleKey: 'blog.post3.title', descKey: 'blog.post3.desc' },
-  ];
+  const scroll = (direction: 'left' | 'right') => {
+    scrollRef.current?.scrollBy({
+      left: direction === 'left' ? -340 : 340,
+      behavior: 'smooth',
+    });
+  };
 
   return (
     <section className="py-20 md:py-28 bg-background">
@@ -31,48 +35,64 @@ const BlogSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mb-12">
-          {posts.map((post, index) => (
-            <motion.article
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="bg-card rounded-xl p-6 shadow-elegant hover:shadow-card transition-all duration-300 border border-accent/20 hover:border-accent/40 flex flex-col"
-            >
-              <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-4">
-                <BookOpen className="w-5 h-5 text-accent" />
-              </div>
-              <h3 className="font-display text-lg font-semibold text-primary mb-3">
-                {t(post.titleKey)}
-              </h3>
-              <p className="font-body text-sm text-muted-foreground leading-relaxed flex-1">
-                {t(post.descKey)}
-              </p>
-            </motion.article>
-          ))}
-        </div>
+        <div className="relative">
+          <button
+            onClick={() => scroll('left')}
+            className="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-10 w-11 h-11 items-center justify-center bg-background/95 rounded-full shadow-elegant hover:bg-muted transition-colors"
+            aria-label={language === 'pt' ? 'Anterior' : 'Previous'}
+          >
+            <ChevronLeft className="w-5 h-5 text-primary" />
+          </button>
+          <button
+            onClick={() => scroll('right')}
+            className="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 w-11 h-11 items-center justify-center bg-background/95 rounded-full shadow-elegant hover:bg-muted transition-colors"
+            aria-label={language === 'pt' ? 'Próximo' : 'Next'}
+          >
+            <ChevronRight className="w-5 h-5 text-primary" />
+          </button>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-center"
-        >
-          <Button asChild variant="outline" size="lg">
-            <a
-              href="https://portobetarello.substack.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2"
-            >
-              {t('blog.cta')}
-              <ExternalLink className="w-4 h-4" />
-            </a>
-          </Button>
-        </motion.div>
+          <div
+            ref={scrollRef}
+            className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 -mx-4 px-4"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            {blogPosts.map((post, index) => (
+              <motion.article
+                key={post.slug}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
+                className="group flex-none w-72 md:w-80 snap-start"
+              >
+                <Link
+                  to={`/blog/${post.slug}`}
+                  className="flex flex-col h-full bg-card rounded-xl overflow-hidden shadow-elegant hover:shadow-card transition-all duration-300 border border-accent/20 hover:border-accent/40"
+                >
+                  <div className="h-44 overflow-hidden">
+                    <img
+                      src={post.image}
+                      alt={post.title[language]}
+                      loading="lazy"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-5 flex flex-col flex-1">
+                    <h3 className="font-display text-lg font-semibold text-primary leading-snug mb-2">
+                      {post.title[language]}
+                    </h3>
+                    <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                      {post.excerpt[language]}
+                    </p>
+                    <span className="mt-auto pt-4 font-body text-sm font-semibold text-accent">
+                      {language === 'pt' ? 'Ler mais' : 'Read more'}
+                    </span>
+                  </div>
+                </Link>
+              </motion.article>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

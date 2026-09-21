@@ -56,12 +56,6 @@ const Dicas = () => {
       food: { pt: 'Gastronomia', en: 'Gastronomy' },
       tourism: { pt: 'Turismo', en: 'Tourism' },
     },
-    shopTitle: { pt: 'Nossa Loja', en: 'Our Shop' },
-    shopSubtitle: {
-      pt: 'Produtos selecionados especialmente para complementar sua experiência em nossos refúgios.',
-      en: 'Products specially selected to complement your experience in our retreats.',
-    },
-    shopCta: { pt: 'Acessar Nossa Loja', en: 'Visit Our Shop' },
     wellnessBadge: { pt: 'PARCEIRA RECOMENDADA', en: 'RECOMMENDED PARTNER' },
     wellnessTitle: { pt: 'Renove Corpo e Mente', en: 'Renew Body and Mind' },
     wellnessP1: {
@@ -136,14 +130,6 @@ const Dicas = () => {
         en: 'Restaurant located at one of the highest points of Praia do Rosa, known for sunset dinners. Offers a tasting menu with local ingredients. Reservation recommended.',
       },
     },
-  ];
-
-  const products = [
-    { name: "Kinder's Prime Steak", price: 'R$ 69,99', desc: { pt: 'Intenso e saboroso, realça o sabor de cortes nobres de carne. Perfeito para grelhar ou selar.', en: 'Bold and savory, brings out the rich flavor of premium cuts. Perfect for grilling or pan-searing.' } },
-    { name: "Kinder's Woodfired Garlic", price: 'R$ 69,99', desc: { pt: 'Rico e aromático, traz um sabor de alho defumado que transforma carnes, legumes e grelhados.', en: 'Rich and aromatic, brings a smoky roasted garlic flavor to meats, vegetables, and grilled dishes.' } },
-    { name: "Kinder's Grilled Chicken", price: 'R$ 69,99', desc: { pt: 'Leve e saboroso, realça o sabor natural do frango com uma mistura equilibrada de ervas e especiarias.', en: 'Light and savory, enhances the natural flavor of chicken with a balanced blend of herbs and spices.' } },
-    { name: "Kinder's Cowboy Butter", price: 'R$ 69,99', desc: { pt: 'Rico e amanteigado, combina alho, ervas e um leve toque picante para um sabor marcante.', en: 'Rich and buttery, blends garlic, herbs, and a hint of spice for a bold, indulgent flavor.' } },
-    { name: "Kinder's All Purpose", price: 'R$ 69,99', desc: { pt: 'Versátil e equilibrado, realça o sabor de carnes, legumes e pratos do dia a dia.', en: 'Versatile and well-balanced, enhances the flavor of meats, vegetables, and everyday dishes.' } },
   ];
 
   const wellnessFeatures = [
@@ -275,51 +261,6 @@ const Dicas = () => {
                 </div>
               </motion.article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Shop */}
-      <section className="bg-muted py-20 md:py-28">
-        <div className="container-luxury">
-          <motion.div {...fadeUp} className="mb-12 text-center">
-            <h2 className="font-display text-3xl font-bold text-primary md:text-4xl">
-              {txt.shopTitle[language]}
-            </h2>
-            <div className="mx-auto mt-4 h-0.5 w-16 bg-gradient-to-r from-accent to-gold-light" />
-            <p className="mx-auto mt-6 max-w-xl font-body text-base text-muted-foreground">
-              {txt.shopSubtitle[language]}
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {products.map((p, i) => (
-              <motion.div
-                key={p.name}
-                {...fadeUp}
-                transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
-                className="overflow-hidden rounded-2xl bg-background shadow-elegant transition-all hover:-translate-y-1 hover:shadow-card"
-              >
-                <div className="flex h-48 items-center justify-center bg-gradient-to-br from-muted to-background p-6">
-                  <div className="font-display text-2xl text-primary/40">Kinder's</div>
-                </div>
-                <div className="p-5">
-                  <h3 className="font-display text-lg font-semibold text-primary">{p.name}</h3>
-                  <p className="mt-2 font-body text-sm leading-relaxed text-muted-foreground">
-                    {p.desc[language]}
-                  </p>
-                  <div className="mt-4 font-display text-xl font-bold text-accent">{p.price}</div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <Button asChild variant="gold" size="lg">
-              <a href="https://nuzap.com.br/portobetarello" target="_blank" rel="noreferrer">
-                {txt.shopCta[language]}
-              </a>
-            </Button>
           </div>
         </div>
       </section>
