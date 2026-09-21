@@ -15,6 +15,7 @@ const Header = () => {
     { key: 'nav.story', to: '/nossa-historia' },
     { key: 'nav.retreats', to: '/refugios' },
     { key: 'nav.tips', to: '/dicas' },
+    { key: 'nav.shop', to: '/shop' },
     { key: 'nav.contact', to: '/contato' },
   ];
 

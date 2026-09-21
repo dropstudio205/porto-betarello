@@ -15,6 +15,7 @@ export const translations: Translations = {
   'nav.story': { pt: 'Nossa História', en: 'Our Story' },
   'nav.retreats': { pt: 'Refúgios', en: 'Retreats' },
   'nav.tips': { pt: 'Dicas', en: 'Tips' },
+  'nav.shop': { pt: 'Shop', en: 'Shop' },
   'nav.contact': { pt: 'Contato', en: 'Contact' },
 
   // Hero
@@ -66,7 +67,7 @@ export const translations: Translations = {
 
   // Blog
   'blog.title': { pt: 'Blog Betarello', en: 'Betarello Blog' },
-  'blog.subtitle': { pt: 'Fique por dentro do nosso blog na Substack', en: 'Stay tuned to our Substack blog' },
+  'blog.subtitle': { pt: 'Histórias, memórias e curiosidades da família Betarello', en: 'Stories, memories and curiosities from the Betarello family' },
   'blog.post1.title': { pt: 'Arroz, feijão, moela e amor', en: 'Rice, beans, gizzard and love' },
   'blog.post1.desc': { pt: 'Há comidas que alimentam o corpo. E há aquelas que alimentam a história.', en: 'Some foods feed the body. Others feed the story.' },
   'blog.post2.title': { pt: 'Viajar também é um lugar dentro da mente', en: 'Traveling is also a place inside the mind' },
