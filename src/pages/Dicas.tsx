@@ -265,51 +265,6 @@ const Dicas = () => {
         </div>
       </section>
 
-      {/* Shop */}
-      <section className="bg-muted py-20 md:py-28">
-        <div className="container-luxury">
-          <motion.div {...fadeUp} className="mb-12 text-center">
-            <h2 className="font-display text-3xl font-bold text-primary md:text-4xl">
-              {txt.shopTitle[language]}
-            </h2>
-            <div className="mx-auto mt-4 h-0.5 w-16 bg-gradient-to-r from-accent to-gold-light" />
-            <p className="mx-auto mt-6 max-w-xl font-body text-base text-muted-foreground">
-              {txt.shopSubtitle[language]}
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {products.map((p, i) => (
-              <motion.div
-                key={p.name}
-                {...fadeUp}
-                transition={{ duration: 0.5, delay: (i % 3) * 0.1 }}
-                className="overflow-hidden rounded-2xl bg-background shadow-elegant transition-all hover:-translate-y-1 hover:shadow-card"
-              >
-                <div className="flex h-48 items-center justify-center bg-gradient-to-br from-muted to-background p-6">
-                  <div className="font-display text-2xl text-primary/40">Kinder's</div>
-                </div>
-                <div className="p-5">
-                  <h3 className="font-display text-lg font-semibold text-primary">{p.name}</h3>
-                  <p className="mt-2 font-body text-sm leading-relaxed text-muted-foreground">
-                    {p.desc[language]}
-                  </p>
-                  <div className="mt-4 font-display text-xl font-bold text-accent">{p.price}</div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <Button asChild variant="gold" size="lg">
-              <a href="https://nuzap.com.br/portobetarello" target="_blank" rel="noreferrer">
-                {txt.shopCta[language]}
-              </a>
-            </Button>
-          </div>
-        </div>
-      </section>
-
       {/* Wellness Partner */}
       <section className="py-20 md:py-28">
         <div className="container-luxury">
