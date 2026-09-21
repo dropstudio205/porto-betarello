@@ -132,14 +132,6 @@ const Dicas = () => {
     },
   ];
 
-  const products = [
-    { name: "Kinder's Prime Steak", price: 'R$ 69,99', desc: { pt: 'Intenso e saboroso, realça o sabor de cortes nobres de carne. Perfeito para grelhar ou selar.', en: 'Bold and savory, brings out the rich flavor of premium cuts. Perfect for grilling or pan-searing.' } },
-    { name: "Kinder's Woodfired Garlic", price: 'R$ 69,99', desc: { pt: 'Rico e aromático, traz um sabor de alho defumado que transforma carnes, legumes e grelhados.', en: 'Rich and aromatic, brings a smoky roasted garlic flavor to meats, vegetables, and grilled dishes.' } },
-    { name: "Kinder's Grilled Chicken", price: 'R$ 69,99', desc: { pt: 'Leve e saboroso, realça o sabor natural do frango com uma mistura equilibrada de ervas e especiarias.', en: 'Light and savory, enhances the natural flavor of chicken with a balanced blend of herbs and spices.' } },
-    { name: "Kinder's Cowboy Butter", price: 'R$ 69,99', desc: { pt: 'Rico e amanteigado, combina alho, ervas e um leve toque picante para um sabor marcante.', en: 'Rich and buttery, blends garlic, herbs, and a hint of spice for a bold, indulgent flavor.' } },
-    { name: "Kinder's All Purpose", price: 'R$ 69,99', desc: { pt: 'Versátil e equilibrado, realça o sabor de carnes, legumes e pratos do dia a dia.', en: 'Versatile and well-balanced, enhances the flavor of meats, vegetables, and everyday dishes.' } },
-  ];
-
   const wellnessFeatures = [
     { icon: Sparkles, title: { pt: 'Yoga & Meditação', en: 'Yoga & Meditation' }, desc: { pt: 'Aulas particulares e em grupo', en: 'Private and group classes' } },
     { icon: Hand, title: { pt: 'Massoterapia', en: 'Massage Therapy' }, desc: { pt: 'Técnicas relaxantes e terapêuticas', en: 'Relaxing and therapeutic techniques' } },
