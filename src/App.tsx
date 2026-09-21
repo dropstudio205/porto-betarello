@@ -12,6 +12,8 @@ import Refugios from "./pages/Refugios";
 import RetreatDetail from "./pages/RetreatDetail";
 import Dicas from "./pages/Dicas";
 import Contato from "./pages/Contato";
+import Shop from "./pages/Shop";
+import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();

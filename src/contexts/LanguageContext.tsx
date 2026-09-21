@@ -75,6 +75,9 @@ export const translations: Translations = {
   'blog.post3.title': { pt: 'Curiosidade Literária: As Raízes Reais de "Grande Sertão: Veredas"', en: 'Literary Curiosity: The Real Roots of "Grande Sertão: Veredas"' },
   'blog.post3.desc': { pt: 'Você sabia que o icônico romance Grande Sertão tem inspirações reais?', en: 'Did you know the iconic novel Grande Sertão has real-life roots?' },
   'blog.cta': { pt: 'Ver Blog no Substack', en: 'View blog on Substack' },
+  'shop.title': { pt: 'Nossa Loja', en: 'Our Shop' },
+  'shop.subtitle': { pt: 'Produtos selecionados especialmente para complementar sua experiência em nossos refúgios.', en: 'Products specially selected to complement your experience in our retreats.' },
+  'shop.cta': { pt: 'Acessar Nossa Loja', en: 'Visit Our Shop' },
 
   // Feedback
   'feedback.title': { pt: 'Feedback', en: 'Feedback' },
