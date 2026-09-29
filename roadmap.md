@@ -8,8 +8,8 @@
 - [x] Remover botão do Substack da seção Blog
 - [x] Criar página Shop separada e adicionar "Shop" no cabeçalho após Dicas
 - [ ] Receber e aplicar os links do Airbnb de cada refúgio (aguardando usuário enviar)
-- [ ] Fazer botão inicial abrir a página de refúgios
-- [ ] Criar seção de experiência com moldura de telefone e espaço para vídeo local após Momentos
-- [ ] Fazer Voltar ao blog retornar à seção do Blog
-- [ ] Adicionar quatro páginas de refúgios para totalizar nove, sem inventar informações de imóveis
-- [ ] Mostrar aviso de loja em construção na Shop
+- [x] Fazer botão inicial abrir a página de refúgios
+- [x] Criar seção de experiência com moldura de telefone e espaço para vídeo local após Momentos
+- [x] Fazer Voltar ao blog retornar à seção do Blog
+- [x] Adicionar quatro páginas de refúgios para totalizar nove, sem inventar informações de imóveis
+- [x] Mostrar aviso de loja em construção na Shop
