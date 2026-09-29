@@ -1,18 +1,12 @@
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from './ui/button';
 import heroBg from '@/assets/hero-bg.jpg';
 
 const Hero = () => {
   const { t } = useLanguage();
-
-  const scrollToRetreats = () => {
-    const element = document.querySelector('#retreats');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section
@@ -76,14 +70,11 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1 }}
           >
-            <Button
-              onClick={scrollToRetreats}
-              variant="hero"
-              size="lg"
-              className="group"
-            >
-              {t('hero.cta')}
-              <ChevronDown className="ml-2 w-4 h-4 group-hover:translate-y-1 transition-transform" />
+            <Button asChild variant="hero" size="lg" className="group">
+              <Link to="/refugios">
+                {t('hero.cta')}
+                <ChevronDown className="ml-2 w-4 h-4 -rotate-90 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </Button>
           </motion.div>
         </motion.div>

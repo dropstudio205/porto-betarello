@@ -17,7 +17,7 @@ const BlogSection = () => {
   };
 
   return (
-    <section className="py-20 md:py-28 bg-background">
+    <section id="blog" className="scroll-mt-20 py-20 md:py-28 bg-background">
       <div className="container-luxury">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
