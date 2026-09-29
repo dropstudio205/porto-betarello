@@ -5,6 +5,11 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import poster from '@/assets/gallery-2.jpg';
 
+// A local file named retreat-moment.mp4 or retreat-moment.webm in src/assets
+// automatically replaces the preview image without changing this section.
+const localVideos = import.meta.glob('../assets/retreat-moment.{mp4,webm}', { eager: true, query: '?url', import: 'default' }) as Record<string, string>;
+const localVideo = Object.values(localVideos)[0];
+
 const RetreatMoment = () => {
   const { language } = useLanguage();
   const reduceMotion = useReducedMotion();
@@ -50,20 +55,23 @@ const RetreatMoment = () => {
           <div className="relative rounded-[2.5rem] border-[7px] border-primary bg-primary p-1.5 shadow-elegant">
             <div className="absolute left-1/2 top-3 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-primary" aria-hidden="true" />
             <div className="relative aspect-[9/16] overflow-hidden rounded-[1.8rem] bg-muted">
-              {/* Replace this poster with a local video source when footage is available. */}
-              <img src={poster} alt={language === 'pt' ? 'Prévia visual de momentos nos refúgios' : 'Visual preview of moments at the retreats'} className="h-full w-full object-cover" />
+              {localVideo ? (
+                <video src={localVideo} poster={poster} autoPlay muted loop playsInline className="h-full w-full object-cover" aria-label={language === 'pt' ? 'Vídeo dos refúgios Porto Betarello' : 'Porto Betarello retreat video'} />
+              ) : (
+                <img src={poster} alt={language === 'pt' ? 'Prévia visual de momentos nos refúgios' : 'Visual preview of moments at the retreats'} className="h-full w-full object-cover" />
+              )}
               <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-primary/20" />
               <div className="absolute bottom-8 left-6 right-6 text-primary-foreground">
-                <Play className="mb-4 h-8 w-8" aria-hidden="true" />
+                {localVideo && <Play className="mb-4 h-8 w-8" aria-hidden="true" />}
                 <p className="font-display text-2xl leading-snug">
                   {language === 'pt' ? 'Seu tempo, do seu jeito.' : 'Your time, your way.'}
                 </p>
               </div>
             </div>
           </div>
-          <p className="mt-5 text-center font-body text-xs text-muted-foreground">
+          {!localVideo && <p className="mt-5 text-center font-body text-xs text-muted-foreground">
             {language === 'pt' ? 'Vídeo dos refúgios em breve' : 'Retreat video coming soon'}
-          </p>
+          </p>}
         </motion.div>
       </div>
     </section>
