@@ -105,7 +105,17 @@ const Refugios = () => {
                     loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  {p.featured && (
+                    {p.comingSoon && (
+                      <span className="absolute bottom-4 left-4 bg-primary/90 text-primary-foreground px-3 py-1.5 text-xs font-semibold">
+                        {language === 'pt' ? 'Imagem ilustrativa' : 'Illustrative image'}
+                      </span>
+                    )}
+                    {p.comingSoon && (
+                      <span className="absolute top-4 right-4 bg-accent text-accent-foreground px-4 py-1.5 text-xs font-semibold">
+                        {language === 'pt' ? 'EM BREVE' : 'COMING SOON'}
+                      </span>
+                    )}
+                    {p.featured && (
                     <span className="absolute top-4 right-4 bg-accent text-accent-foreground px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider">
                       {language === 'pt' ? 'DESTAQUE' : 'FEATURED'}
                     </span>
@@ -115,12 +125,12 @@ const Refugios = () => {
                 <div className="p-7 flex flex-col flex-1">
                   <div className="flex items-center gap-1.5 text-xs text-muted-foreground mb-3">
                     <MapPin className="w-3.5 h-3.5 text-primary" />
-                    <span>{p.location}</span>
+                    <span>{p.comingSoon ? (language === 'pt' ? 'Localização a confirmar' : 'Location to be confirmed') : p.location}</span>
                   </div>
                   <h3 className="font-display text-2xl font-bold text-primary mb-5">{p.name}</h3>
 
                   <div className="mt-auto">
-                    <div className="flex gap-6 py-4 border-t border-border/40">
+                    {!p.comingSoon && <div className="flex gap-6 py-4 border-t border-border/40">
                       <div className="flex items-center gap-2 text-sm text-muted-foreground">
                         <Bed className="w-4 h-4 text-accent" />
                         {p.rooms}{' '}
@@ -135,10 +145,10 @@ const Refugios = () => {
                           ? p.baths === 1 ? 'banheiro' : 'banheiros'
                           : p.baths === 1 ? 'bathroom' : 'bathrooms'}
                       </div>
-                    </div>
+                    </div>}
                     <Button asChild className="w-full mt-2">
                       <Link to={`/refugios/${p.slug}`}>
-                        {language === 'pt' ? 'Ver detalhes e reservar' : 'View details and book'}
+                        {p.comingSoon ? (language === 'pt' ? 'Conhecer a novidade' : 'Explore this preview') : (language === 'pt' ? 'Ver detalhes e reservar' : 'View details and book')}
                       </Link>
                     </Button>
                   </div>

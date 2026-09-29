@@ -29,7 +29,7 @@ const BlogPost = () => {
       <section className="bg-background pt-10 pb-16 md:pt-14 md:pb-20">
         <div className="container-luxury max-w-3xl">
           <Link
-            to="/"
+            to="/#blog"
             className="mb-8 inline-flex items-center gap-2 font-body text-sm font-semibold text-muted-foreground transition-colors hover:text-primary"
           >
             <ArrowLeft className="h-4 w-4" />

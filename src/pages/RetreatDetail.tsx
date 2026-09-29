@@ -60,7 +60,7 @@ const RetreatDetail = () => {
             <div>
               <h1 className="font-display text-4xl font-bold leading-tight text-primary md:text-5xl">{retreat.name}</h1>
               <p className="mt-3 flex items-center gap-2 font-body text-sm text-muted-foreground md:text-base">
-                <MapPin className="h-4 w-4 text-accent" /> {retreat.location}
+                <MapPin className="h-4 w-4 text-accent" /> {retreat.comingSoon ? (language === 'pt' ? 'Localização a confirmar' : 'Location to be confirmed') : retreat.location}
               </p>
             </div>
             {retreat.featured && (
@@ -68,6 +68,7 @@ const RetreatDetail = () => {
                 {language === 'pt' ? 'Destaque' : 'Featured'}
               </span>
             )}
+            {retreat.comingSoon && <span className="w-fit bg-accent px-4 py-2 font-body text-xs font-bold uppercase text-accent-foreground">{language === 'pt' ? 'Em breve' : 'Coming soon'}</span>}
           </div>
         </div>
       </section>
@@ -78,6 +79,7 @@ const RetreatDetail = () => {
             <div className="aspect-[4/3] overflow-hidden rounded-lg bg-muted shadow-elegant md:aspect-[16/10]">
               <img src={retreat.images[selectedPhoto]} alt={`${retreat.name} — ${language === 'pt' ? `foto ${selectedPhoto + 1}` : `photo ${selectedPhoto + 1}`}`} className="h-full w-full object-cover" />
             </div>
+            {retreat.comingSoon && <p className="mt-3 text-sm text-muted-foreground">{language === 'pt' ? 'Imagens ilustrativas — fotos deste refúgio em breve.' : 'Illustrative images — photos of this retreat coming soon.'}</p>}
             <div className="mt-3 grid grid-cols-4 gap-3">
               {retreat.images.map((image, index) => (
                 <Button
@@ -97,24 +99,24 @@ const RetreatDetail = () => {
 
           <motion.aside initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: 0.08 }} className="lg:sticky lg:top-28">
             <h2 className="font-display text-2xl font-bold text-primary md:text-3xl">{text.about[language]}</h2>
-            <div className="mt-5 flex flex-wrap gap-x-6 gap-y-3 border-y border-border/40 py-5 font-body text-sm text-muted-foreground">
+            {!retreat.comingSoon && <div className="mt-5 flex flex-wrap gap-x-6 gap-y-3 border-y border-border/40 py-5 font-body text-sm text-muted-foreground">
               <span className="flex items-center gap-2"><Bed className="h-5 w-5 text-accent" />{retreat.rooms} {text.rooms[language]}</span>
               <span className="flex items-center gap-2"><Bath className="h-5 w-5 text-accent" />{retreat.baths} {text.baths[language]}</span>
               <span className="flex items-center gap-2"><Users className="h-5 w-5 text-accent" />{retreat.guests} {text.guests[language]}</span>
-            </div>
+            </div>}
             <p className="mt-6 font-body text-base leading-relaxed text-muted-foreground">{retreat.description[language]}</p>
 
-            <h3 className="mt-8 font-display text-xl font-semibold text-primary">{text.features[language]}</h3>
+            {!retreat.comingSoon && <><h3 className="mt-8 font-display text-xl font-semibold text-primary">{text.features[language]}</h3>
             <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
               {retreat.highlights.map((highlight) => (
                 <li key={highlight.pt} className="flex items-start gap-3 font-body text-sm text-foreground">
                   <Check className="mt-0.5 h-4 w-4 shrink-0 text-accent" /> {highlight[language]}
                 </li>
               ))}
-            </ul>
+            </ul></>}
 
             <div className="mt-9 grid gap-3">
-              {retreat.airbnbUrl ? (
+              {retreat.comingSoon ? null : retreat.airbnbUrl ? (
                 <Button asChild size="lg" className="w-full">
                   <a href={retreat.airbnbUrl} target="_blank" rel="noopener noreferrer"><ExternalLink />{language === 'pt' ? 'Ver no Airbnb' : 'View on Airbnb'}</a>
                 </Button>
@@ -129,7 +131,7 @@ const RetreatDetail = () => {
         </div>
       </section>
 
-      <section className="bg-muted/50 py-20 md:py-24">
+      {!retreat.comingSoon && <section className="bg-muted/50 py-20 md:py-24">
         <div className="container-luxury">
           <div className="mb-8 max-w-2xl">
             <h2 className="font-display text-3xl font-bold text-primary md:text-4xl">{text.location[language]}</h2>
@@ -139,7 +141,7 @@ const RetreatDetail = () => {
             <iframe title={`${text.location[language]} — ${retreat.name}`} src={mapUrl} className="h-[380px] w-full md:h-[480px]" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
           </div>
         </div>
-      </section>
+      </section>}
     </>
   );
 };

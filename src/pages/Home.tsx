@@ -4,6 +4,7 @@ import Hero from '@/components/Hero';
 import Gallery from '@/components/Gallery';
 import BlogSection from '@/components/BlogSection';
 import FeedbackSection from '@/components/FeedbackSection';
+import RetreatMoment from '@/components/RetreatMoment';
 
 const Home = () => {
   const { language } = useLanguage();
@@ -34,6 +35,7 @@ const Home = () => {
       </Helmet>
       <Hero />
       <Gallery />
+      <RetreatMoment />
       <BlogSection />
       <FeedbackSection />
     </>

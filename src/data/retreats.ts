@@ -20,6 +20,7 @@ export interface Retreat {
   baths: number;
   guests: number;
   featured?: boolean;
+  comingSoon?: boolean;
   images: string[];
   description: LocalizedText;
   highlights: LocalizedText[];
@@ -127,6 +128,58 @@ export const retreats: Retreat[] = [
       { pt: 'Cozinha equipada', en: 'Equipped kitchen' },
       { pt: 'Enxoval de cama e banho', en: 'Bed linen and towels' },
     ],
+  },
+  {
+    slug: 'recanto-da-brisa',
+    name: 'Recanto da Brisa',
+    location: 'Localização a confirmar',
+    mapQuery: '', rooms: 0, baths: 0, guests: 0,
+    comingSoon: true,
+    images: [gallery2, gallery4, gallery5, gallery1],
+    description: {
+      pt: 'Um novo capítulo da coleção Porto Betarello está sendo preparado. Fotos ilustrativas; localização, características e disponibilidade serão divulgadas em breve.',
+      en: 'A new chapter of the Porto Betarello collection is being prepared. Photos are illustrative; location, features and availability will be announced soon.',
+    },
+    highlights: [],
+  },
+  {
+    slug: 'casa-entre-ares',
+    name: 'Casa Entre Ares',
+    location: 'Localização a confirmar',
+    mapQuery: '', rooms: 0, baths: 0, guests: 0,
+    comingSoon: true,
+    images: [gallery5, gallery2, gallery6, gallery3],
+    description: {
+      pt: 'Estamos preparando mais um espaço para a coleção Porto Betarello. Fotos ilustrativas; localização, características e disponibilidade serão divulgadas em breve.',
+      en: 'We are preparing another space for the Porto Betarello collection. Photos are illustrative; location, features and availability will be announced soon.',
+    },
+    highlights: [],
+  },
+  {
+    slug: 'refugio-do-horizonte',
+    name: 'Refúgio do Horizonte',
+    location: 'Localização a confirmar',
+    mapQuery: '', rooms: 0, baths: 0, guests: 0,
+    comingSoon: true,
+    images: [gallery3, gallery1, gallery4, gallery6],
+    description: {
+      pt: 'Mais um refúgio está a caminho. As imagens são ilustrativas; informações sobre o endereço, espaços e reservas serão compartilhadas quando disponíveis.',
+      en: 'Another retreat is on its way. Images are illustrative; address, space and booking information will be shared when available.',
+    },
+    highlights: [],
+  },
+  {
+    slug: 'morada-das-estrelas',
+    name: 'Morada das Estrelas',
+    location: 'Localização a confirmar',
+    mapQuery: '', rooms: 0, baths: 0, guests: 0,
+    comingSoon: true,
+    images: [gallery6, gallery5, gallery2, gallery1],
+    description: {
+      pt: 'Uma nova possibilidade de estadia está em preparação. Fotos ilustrativas; detalhes do imóvel e disponibilidade ainda serão confirmados.',
+      en: 'A new stay is in the works. Photos are illustrative; property details and availability have yet to be confirmed.',
+    },
+    highlights: [],
   },
 ];
 
