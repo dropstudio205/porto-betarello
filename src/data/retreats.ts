@@ -33,6 +33,14 @@ import moradaSol6 from '@/assets/morada-do-sol-IMG_2572.jpg.asset.json';
 import moradaSol7 from '@/assets/morada-do-sol-IMG_2587.jpg.asset.json';
 import moradaSol8 from '@/assets/morada-do-sol-IMG_2580.jpg.asset.json';
 import moradaSol9 from '@/assets/morada-do-sol-IMG_2540.jpg.asset.json';
+import moradaCachoeira1 from '@/assets/morada-da-cachoeira-1.jpg.asset.json';
+import moradaCachoeira2 from '@/assets/morada-da-cachoeira-2.jpg.asset.json';
+import moradaCachoeira3 from '@/assets/morada-da-cachoeira-3.jpg.asset.json';
+import moradaCachoeira4 from '@/assets/morada-da-cachoeira-4.jpg.asset.json';
+import moradaCachoeira5 from '@/assets/morada-da-cachoeira-5.jpg.asset.json';
+import moradaCachoeira6 from '@/assets/morada-da-cachoeira-6.jpg.asset.json';
+import moradaCachoeira7 from '@/assets/morada-da-cachoeira-7.jpg.asset.json';
+import moradaCachoeira8 from '@/assets/morada-da-cachoeira-8.jpg.asset.json';
 
 export type LocalizedText = { pt: string; en: string };
 export interface RetreatSection { title: LocalizedText; body: LocalizedText }
@@ -166,7 +174,7 @@ export const retreats: Retreat[] = [
     mapQuery: 'Rua das Buganvílias, 123, Cachoeira do Bom Jesus, Florianópolis, SC',
     rooms: 1, beds: 2, baths: 1, guests: 4,
     featured: true,
-    images: rotate(0),
+    images: [moradaCachoeira1.url, moradaCachoeira2.url, moradaCachoeira3.url, moradaCachoeira4.url, moradaCachoeira5.url, moradaCachoeira6.url, moradaCachoeira7.url, moradaCachoeira8.url],
     airbnbUrl: 'https://www.airbnb.com.br/rooms/1543496322651033833',
     contactPhone: BR_PHONE,
     description: T(
