@@ -60,6 +60,16 @@ import casaDoInterior7 from '@/assets/casa-do-interior-7.jpg.asset.json';
 import casaDoInterior8 from '@/assets/casa-do-interior-8.jpg.asset.json';
 import casaDoInterior9 from '@/assets/casa-do-interior-9.jpg.asset.json';
 import casaDoInterior10 from '@/assets/casa-do-interior-10.jpg.asset.json';
+import casaDaLira1 from '@/assets/casa-da-lira-1.jpg.asset.json';
+import casaDaLira2 from '@/assets/casa-da-lira-2.jpg.asset.json';
+import casaDaLira3 from '@/assets/casa-da-lira-3.jpg.asset.json';
+import casaDaLira4 from '@/assets/casa-da-lira-4.jpg.asset.json';
+import casaDaLira5 from '@/assets/casa-da-lira-5.jpg.asset.json';
+import casaDaLira6 from '@/assets/casa-da-lira-6.jpg.asset.json';
+import casaDaLira7 from '@/assets/casa-da-lira-7.jpg.asset.json';
+import casaDaLira8 from '@/assets/casa-da-lira-8.jpg.asset.json';
+import casaDaLira9 from '@/assets/casa-da-lira-9.jpg.asset.json';
+import casaDaLira10 from '@/assets/casa-da-lira-10.jpg.asset.json';
 
 
 export type LocalizedText = { pt: string; en: string };
