@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
-import heroBg from '@/assets/hero-bg.jpg';
+import shopPhoto from '@/assets/casa-da-lira-5.jpg.asset.json';
 
 const Shop = () => {
   const { language, t } = useLanguage();
@@ -29,7 +29,7 @@ const Shop = () => {
 
       {/* Hero */}
       <section className="relative h-[55vh] min-h-[380px] flex items-center justify-center overflow-hidden mt-16">
-        <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={shopPhoto.url} alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-primary/50" />
         <motion.div
           initial={{ opacity: 0, y: 30 }}
