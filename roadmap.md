@@ -13,3 +13,4 @@
 - [x] Fazer Voltar ao blog retornar à seção do Blog
 - [x] Adicionar quatro páginas de refúgios para totalizar nove, sem inventar informações de imóveis
 - [x] Mostrar aviso de loja em construção na Shop
+- [ ] Fotos reais de cada refúgio (aguardando envio)
