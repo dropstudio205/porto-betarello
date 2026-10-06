@@ -50,6 +50,16 @@ import florDaMontana6 from '@/assets/flor-da-montana-6.jpg.asset.json';
 import florDaMontana7 from '@/assets/flor-da-montana-7.jpg.asset.json';
 import florDaMontana8 from '@/assets/flor-da-montana-8.jpg.asset.json';
 import florDaMontana9 from '@/assets/flor-da-montana-9.jpg.asset.json';
+import casaDoInterior1 from '@/assets/casa-do-interior-1.jpg.asset.json';
+import casaDoInterior2 from '@/assets/casa-do-interior-2.jpg.asset.json';
+import casaDoInterior3 from '@/assets/casa-do-interior-3.jpg.asset.json';
+import casaDoInterior4 from '@/assets/casa-do-interior-4.jpg.asset.json';
+import casaDoInterior5 from '@/assets/casa-do-interior-5.jpg.asset.json';
+import casaDoInterior6 from '@/assets/casa-do-interior-6.jpg.asset.json';
+import casaDoInterior7 from '@/assets/casa-do-interior-7.jpg.asset.json';
+import casaDoInterior8 from '@/assets/casa-do-interior-8.jpg.asset.json';
+import casaDoInterior9 from '@/assets/casa-do-interior-9.jpg.asset.json';
+import casaDoInterior10 from '@/assets/casa-do-interior-10.jpg.asset.json';
 
 
 export type LocalizedText = { pt: string; en: string };
@@ -244,7 +254,7 @@ export const retreats: Retreat[] = [
     location: 'Centro Histórico, Amparo – SP',
     mapQuery: 'Centro Histórico, Amparo, SP',
     rooms: 3, beds: 3, baths: 2, guests: 5,
-    images: rotate(3),
+    images: [casaDoInterior1.url, casaDoInterior2.url, casaDoInterior3.url, casaDoInterior4.url, casaDoInterior5.url, casaDoInterior6.url, casaDoInterior7.url, casaDoInterior8.url, casaDoInterior9.url, casaDoInterior10.url],
     airbnbUrl: 'https://www.airbnb.com.br/rooms/1425663339808746025',
     contactPhone: BR_PHONE,
     description: T(
