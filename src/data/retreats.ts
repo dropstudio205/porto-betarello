@@ -41,6 +41,16 @@ import moradaCachoeira5 from '@/assets/morada-da-cachoeira-5.jpg.asset.json';
 import moradaCachoeira6 from '@/assets/morada-da-cachoeira-6.jpg.asset.json';
 import moradaCachoeira7 from '@/assets/morada-da-cachoeira-7.jpg.asset.json';
 import moradaCachoeira8 from '@/assets/morada-da-cachoeira-8.jpg.asset.json';
+import florDaMontana1 from '@/assets/flor-da-montana-1.jpg.asset.json';
+import florDaMontana2 from '@/assets/flor-da-montana-2.jpg.asset.json';
+import florDaMontana3 from '@/assets/flor-da-montana-3.jpg.asset.json';
+import florDaMontana4 from '@/assets/flor-da-montana-4.jpg.asset.json';
+import florDaMontana5 from '@/assets/flor-da-montana-5.jpg.asset.json';
+import florDaMontana6 from '@/assets/flor-da-montana-6.jpg.asset.json';
+import florDaMontana7 from '@/assets/flor-da-montana-7.jpg.asset.json';
+import florDaMontana8 from '@/assets/flor-da-montana-8.jpg.asset.json';
+import florDaMontana9 from '@/assets/flor-da-montana-9.jpg.asset.json';
+
 
 export type LocalizedText = { pt: string; en: string };
 export interface RetreatSection { title: LocalizedText; body: LocalizedText }
@@ -204,7 +214,7 @@ export const retreats: Retreat[] = [
     location: 'Centro, Amparo – SP',
     mapQuery: 'Centro, Amparo, SP',
     rooms: 3, beds: 3, baths: 2, guests: 6,
-    images: rotate(6),
+    images: [florDaMontana1.url, florDaMontana2.url, florDaMontana3.url, florDaMontana4.url, florDaMontana5.url, florDaMontana6.url, florDaMontana7.url, florDaMontana8.url, florDaMontana9.url],
     airbnbUrl: 'https://www.airbnb.com.br/rooms/1612345498075548772',
     contactPhone: BR_PHONE,
     description: T(
