@@ -294,7 +294,7 @@ export const retreats: Retreat[] = [
     location: 'Amparo – SP',
     mapQuery: '',
     rooms: 2, beds: 2, baths: 1,
-    images: rotate(8),
+    images: [casaDaLira8.url, casaDaLira5.url, casaDaLira9.url, casaDaLira10.url, casaDaLira3.url, casaDaLira4.url, casaDaLira1.url, casaDaLira6.url, casaDaLira7.url, casaDaLira2.url],
     airbnbUrl: 'https://www.airbnb.com.br/rooms/694249561141597439',
     contactPhone: BR_PHONE,
     description: T(
