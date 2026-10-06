@@ -13,6 +13,14 @@ import gallery6 from '@/assets/momentos-porto-6.jpeg.asset.json';
 import gallery7 from '@/assets/momentos-porto-7.jpeg.asset.json';
 import gallery8 from '@/assets/momentos-porto-8.jpeg.asset.json';
 import gallery9 from '@/assets/momentos-porto-9.jpeg.asset.json';
+import gallery10 from '@/assets/momentos-porto-10.jpeg.asset.json';
+import gallery11 from '@/assets/momentos-porto-11.jpeg.asset.json';
+import gallery12 from '@/assets/momentos-porto-12.jpeg.asset.json';
+import gallery13 from '@/assets/momentos-porto-13.jpeg.asset.json';
+import gallery14 from '@/assets/momentos-porto-14.jpeg.asset.json';
+import gallery15 from '@/assets/momentos-porto-15.jpeg.asset.json';
+import gallery16 from '@/assets/momentos-porto-16.jpeg.asset.json';
+import gallery17 from '@/assets/momentos-porto-17.jpeg.asset.json';
 
 const Gallery = () => {
   const { t, language } = useLanguage();
@@ -21,6 +29,7 @@ const Gallery = () => {
 
   const images = [
     gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9,
+    gallery10, gallery11, gallery12, gallery13, gallery14, gallery15, gallery16, gallery17,
   ].map((image, index) => ({ src: image.url, alt: `${language === 'pt' ? 'Momentos Porto Betarello — foto' : 'Porto Betarello moments — photo'} ${index + 1}` }));
 
   const scroll = (direction: 'left' | 'right') => {

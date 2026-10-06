@@ -19,4 +19,5 @@
 - [ ] Fotos reais de cada refúgio (aguardando envio)
 - [x] Atualizar capa da Casa da Lira e capa inicial com praia enviada
 - [x] Substituir fotos de Momentos pelas nove fotos enviadas, sem legendas
+- [x] Acrescentar mais oito fotos enviadas a Momentos (total de dezessete)
 - [x] Exibir casas Indianápolis e Internacional como detalhes em breve
