@@ -8,6 +8,13 @@ import gallery3 from '@/assets/gallery-3.jpg';
 import gallery4 from '@/assets/gallery-4.jpg';
 import gallery5 from '@/assets/gallery-5.jpg';
 import gallery6 from '@/assets/gallery-6.jpg';
+import moradaMar1 from '@/assets/morada-do-mar-2368.jpg.asset.json';
+import moradaMar2 from '@/assets/morada-do-mar-2375.jpg.asset.json';
+import moradaMar3 from '@/assets/morada-do-mar-2377.jpg.asset.json';
+import moradaMar4 from '@/assets/morada-do-mar-2378.jpg.asset.json';
+import moradaMar5 from '@/assets/morada-do-mar-2382.jpg.asset.json';
+import moradaMar6 from '@/assets/morada-do-mar-2388.jpg.asset.json';
+import moradaMar7 from '@/assets/morada-do-mar-2395.jpg.asset.json';
 
 export type LocalizedText = { pt: string; en: string };
 export interface RetreatSection { title: LocalizedText; body: LocalizedText }
@@ -65,7 +72,7 @@ export const retreats: Retreat[] = [
     location: 'Pinheira, Palhoça – SC',
     mapQuery: 'Rua Paulo Manoel dos Santos, 3605, Pinheira, Palhoça, SC',
     rooms: 2, beds: 3, baths: 1, guests: 6,
-    images: rotate(2),
+    images: [moradaMar1.url, moradaMar2.url, moradaMar3.url, moradaMar4.url, moradaMar5.url, moradaMar6.url, moradaMar7.url],
     airbnbUrl: 'https://www.airbnb.com.br/rooms/1490512859657438882',
     contactPhone: BR_PHONE,
     description: T(
