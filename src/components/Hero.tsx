@@ -3,7 +3,7 @@ import { ChevronDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from './ui/button';
-import heroBg from '@/assets/hero-bg.jpg';
+import heroBg from '@/assets/floripa-home.jpg.asset.json';
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -16,8 +16,8 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src={heroBg}
-          alt="Luxury beachfront vacation home at sunset with family on terrace"
+          src={heroBg.url}
+          alt="Praia de Florianópolis"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/40 to-primary/70" />

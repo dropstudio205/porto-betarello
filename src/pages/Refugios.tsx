@@ -128,6 +128,7 @@ const Refugios = () => {
                     <span>{p.comingSoon ? (language === 'pt' ? 'Localização a confirmar' : 'Location to be confirmed') : p.location}</span>
                   </div>
                   <h3 className="font-display text-2xl font-bold text-primary mb-5">{p.name}</h3>
+                  {p.comingSoon && <p className="mb-5 font-body text-sm leading-relaxed text-muted-foreground">{p.description[language]}</p>}
 
                   <div className="mt-auto">
                     {!p.comingSoon && <div className="flex gap-6 py-4 border-t border-border/40">
