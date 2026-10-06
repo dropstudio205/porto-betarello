@@ -294,7 +294,7 @@ export const retreats: Retreat[] = [
     location: 'Amparo – SP',
     mapQuery: '',
     rooms: 2, beds: 2, baths: 1,
-    images: [casaDaLira8.url, casaDaLira5.url, casaDaLira9.url, casaDaLira10.url, casaDaLira3.url, casaDaLira4.url, casaDaLira1.url, casaDaLira6.url, casaDaLira7.url, casaDaLira2.url],
+    images: [casaDaLira5.url, casaDaLira8.url, casaDaLira9.url, casaDaLira10.url, casaDaLira3.url, casaDaLira4.url, casaDaLira1.url, casaDaLira6.url, casaDaLira7.url, casaDaLira2.url],
     airbnbUrl: 'https://www.airbnb.com.br/rooms/694249561141597439',
     contactPhone: BR_PHONE,
     description: T(
@@ -319,14 +319,15 @@ export const retreats: Retreat[] = [
   {
     slug: 'casa-indianapolis',
     name: 'Casa Indianápolis',
+    comingSoon: true,
     location: 'Indianápolis – EUA',
     mapQuery: 'Indianapolis, Indiana, USA',
     rooms: 2, baths: 1,
     images: rotate(4),
     contactPhone: US_PHONE,
     description: T(
-      'Para quem quer sair do Brasil e viver dias especiais nos Estados Unidos. Um refúgio em local privilegiado e muito bonito, com o mesmo cuidado e acolhimento Porto Betarello — uma base confortável para explorar Indianápolis com tranquilidade.',
-      'For those who want to travel beyond Brazil and enjoy special days in the United States. A retreat in a beautiful, privileged location with the same Porto Betarello care and warmth — a comfortable base for exploring Indianapolis at ease.',
+      'Em breve daremos mais detalhes sobre a Casa Indianápolis, nosso refúgio nos Estados Unidos.',
+      'More details about Casa Indianápolis, our retreat in the United States, are coming soon.',
     ),
     highlights: [
       T('Local privilegiado', 'Prime location'),
@@ -337,14 +338,15 @@ export const retreats: Retreat[] = [
   {
     slug: 'casa-internacional',
     name: 'Casa Internacional',
+    comingSoon: true,
     location: 'Estados Unidos',
     mapQuery: '',
     rooms: 1, baths: 1,
     images: rotate(7),
     contactPhone: US_PHONE,
     description: T(
-      'Uma casa aconchegante nos Estados Unidos, ideal para casais ou viajantes que buscam conforto e praticidade longe de casa — com a hospitalidade da família Betarello do outro lado do continente.',
-      'A cozy home in the United States, ideal for couples or travelers seeking comfort and convenience away from home — with the Betarello family hospitality across the continent.',
+      'Em breve daremos mais detalhes sobre a Casa Internacional, nosso refúgio nos Estados Unidos.',
+      'More details about Casa Internacional, our retreat in the United States, are coming soon.',
     ),
     highlights: [
       T('Ideal para casais', 'Ideal for couples'),

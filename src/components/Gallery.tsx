@@ -3,26 +3,25 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-import gallery1 from '@/assets/gallery-1.jpg';
-import gallery2 from '@/assets/gallery-2.jpg';
-import gallery3 from '@/assets/gallery-3.jpg';
-import gallery4 from '@/assets/gallery-4.jpg';
-import gallery5 from '@/assets/gallery-5.jpg';
-import gallery6 from '@/assets/gallery-6.jpg';
+import { Button } from '@/components/ui/button';
+import gallery1 from '@/assets/momentos-porto-1.jpeg.asset.json';
+import gallery2 from '@/assets/momentos-porto-2.jpeg.asset.json';
+import gallery3 from '@/assets/momentos-porto-3.jpeg.asset.json';
+import gallery4 from '@/assets/momentos-porto-4.jpeg.asset.json';
+import gallery5 from '@/assets/momentos-porto-5.jpeg.asset.json';
+import gallery6 from '@/assets/momentos-porto-6.jpeg.asset.json';
+import gallery7 from '@/assets/momentos-porto-7.jpeg.asset.json';
+import gallery8 from '@/assets/momentos-porto-8.jpeg.asset.json';
+import gallery9 from '@/assets/momentos-porto-9.jpeg.asset.json';
 
 const Gallery = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const images = [
-    { src: gallery1, caption: t('gallery.caption1') },
-    { src: gallery2, caption: t('gallery.caption2') },
-    { src: gallery3, caption: t('gallery.caption3') },
-    { src: gallery4, caption: t('gallery.caption4') },
-    { src: gallery5, caption: t('gallery.caption5') },
-    { src: gallery6, caption: t('gallery.caption6') },
-  ];
+    gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, gallery8, gallery9,
+  ].map((image, index) => ({ src: image.url, alt: `${language === 'pt' ? 'Momentos Porto Betarello — foto' : 'Porto Betarello moments — photo'} ${index + 1}` }));
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
@@ -63,20 +62,20 @@ const Gallery = () => {
         {/* Carousel Container */}
         <div className="relative">
           {/* Navigation Buttons */}
-          <button
+          <Button variant="ghost" size="icon"
             onClick={() => scroll('left')}
             className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 items-center justify-center bg-background/90 backdrop-blur-sm rounded-full shadow-elegant hover:bg-background transition-colors"
             aria-label="Previous"
           >
             <ChevronLeft className="w-6 h-6 text-primary" />
-          </button>
-          <button
+          </Button>
+          <Button variant="ghost" size="icon"
             onClick={() => scroll('right')}
             className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 items-center justify-center bg-background/90 backdrop-blur-sm rounded-full shadow-elegant hover:bg-background transition-colors"
             aria-label="Next"
           >
             <ChevronRight className="w-6 h-6 text-primary" />
-          </button>
+          </Button>
 
           {/* Scrollable Gallery */}
           <div
@@ -97,13 +96,9 @@ const Gallery = () => {
                 <div className="relative rounded-lg overflow-hidden shadow-elegant">
                   <img
                     src={image.src}
-                    alt={image.caption}
+                    alt={image.alt}
                     className="w-full h-52 md:h-60 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <p className="font-body text-sm text-primary-foreground">{image.caption}</p>
-                  </div>
                 </div>
               </motion.div>
             ))}
@@ -122,29 +117,29 @@ const Gallery = () => {
             onClick={() => setSelectedImage(null)}
           >
             {/* Close Button */}
-            <button
+            <Button variant="ghost" size="icon"
               onClick={() => setSelectedImage(null)}
               className="absolute top-4 right-4 z-10 w-12 h-12 flex items-center justify-center bg-background/20 hover:bg-background/40 rounded-full transition-colors"
               aria-label="Close"
             >
               <X className="w-6 h-6 text-primary-foreground" />
-            </button>
+            </Button>
 
             {/* Navigation */}
-            <button
+            <Button variant="ghost" size="icon"
               onClick={(e) => { e.stopPropagation(); navigateLightbox('prev'); }}
               className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-background/20 hover:bg-background/40 rounded-full transition-colors"
               aria-label="Previous image"
             >
               <ChevronLeft className="w-6 h-6 text-primary-foreground" />
-            </button>
-            <button
+            </Button>
+            <Button variant="ghost" size="icon"
               onClick={(e) => { e.stopPropagation(); navigateLightbox('next'); }}
               className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-background/20 hover:bg-background/40 rounded-full transition-colors"
               aria-label="Next image"
             >
               <ChevronRight className="w-6 h-6 text-primary-foreground" />
-            </button>
+            </Button>
 
             {/* Image */}
             <motion.div
@@ -158,12 +153,9 @@ const Gallery = () => {
             >
               <img
                 src={images[selectedImage].src}
-                alt={images[selectedImage].caption}
+                alt={images[selectedImage].alt}
                 className="max-w-full max-h-[80vh] object-contain rounded-lg"
               />
-              <p className="absolute bottom-0 left-0 right-0 p-4 text-center font-body text-sm text-primary-foreground bg-primary/60 rounded-b-lg">
-                {images[selectedImage].caption}
-              </p>
             </motion.div>
           </motion.div>
         )}
