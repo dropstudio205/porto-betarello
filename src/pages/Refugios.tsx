@@ -4,7 +4,7 @@ import { Bed, Bath, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import heroBg from '@/assets/hero-bg.jpg';
+import heroBg from '@/assets/refugios-hero.jpg.asset.json';
 import { retreats } from '@/data/retreats';
 
 const Refugios = () => {
