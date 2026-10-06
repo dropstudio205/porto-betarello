@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import { Heart, Users, Sparkles } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import heroBg from '@/assets/hero-bg.jpg';
-import img1 from '@/assets/gallery-1.jpg';
-import img2 from '@/assets/gallery-2.jpg';
-import img3 from '@/assets/gallery-3.jpg';
-import img4 from '@/assets/gallery-4.jpg';
+import img1Asset from '@/assets/historia-logo.png.asset.json';
+import img2Asset from '@/assets/historia-balanco.jpg.asset.json';
+import img3Asset from '@/assets/historia-cafe.jpg.asset.json';
+import img4Asset from '@/assets/historia-familia.jpg.asset.json';
 
 const NossaHistoria = () => {
   const { language } = useLanguage();
