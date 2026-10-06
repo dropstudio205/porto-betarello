@@ -10,6 +10,10 @@ import img4Asset from '@/assets/historia-familia.jpg.asset.json';
 
 const NossaHistoria = () => {
   const { language } = useLanguage();
+  const img1 = img1Asset.url;
+  const img2 = img2Asset.url;
+  const img3 = img3Asset.url;
+  const img4 = img4Asset.url;
 
   const seo = {
     pt: {
