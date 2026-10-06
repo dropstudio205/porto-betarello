@@ -1,5 +1,8 @@
 # Roadmap
 
+- [x] Usar foto do prato no blog Arroz, feijão; curiosidade literária em segundo com texto e fotos enviados
+- [x] Substituir capas de Contato e Shop por fotos distintas dos nossos imóveis
+
 - [x] Centralizar os dados bilíngues dos cinco refúgios
 - [x] Criar a página individual com galeria, detalhes, contatos e mapa
 - [x] Conectar os cards e registrar as novas rotas

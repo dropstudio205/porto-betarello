@@ -29,6 +29,7 @@ import {
   DialogFooter,
 } from '@/components/ui/dialog';
 import { useToast } from '@/hooks/use-toast';
+import contactPhoto from '@/assets/morada-do-sol-IMG_2553.jpg.asset.json';
 
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
@@ -240,7 +241,7 @@ const Contato = () => {
       {/* Hero */}
       <section className="relative h-[60vh] min-h-[440px] w-full overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1455587734955-081b22074882?w=1800&q=80"
+          src={contactPhoto.url}
           alt={txt.heroTitle[language]}
           className="absolute inset-0 h-full w-full object-cover"
         />

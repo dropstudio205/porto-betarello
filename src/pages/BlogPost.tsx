@@ -58,7 +58,11 @@ const BlogPost = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-10 space-y-6"
           >
-            {post.content.map((paragraph, index) => (
+            {post.content.map((paragraph, index) => paragraph.heading ? (
+              <h2 key={index} className="pt-4 font-display text-2xl font-semibold leading-snug text-primary md:text-3xl">
+                {paragraph[language]}
+              </h2>
+            ) : (
               <p
                 key={index}
                 className={`font-body leading-relaxed text-muted-foreground ${
@@ -69,6 +73,16 @@ const BlogPost = () => {
               </p>
             ))}
           </motion.div>
+
+          {post.gallery && (
+            <div className="mt-12 grid gap-6 sm:grid-cols-2">
+              {post.gallery.map((photo) => (
+                <figure key={photo.image} className="overflow-hidden rounded-lg">
+                  <img src={photo.image} alt={photo.alt[language]} loading="lazy" className="h-auto w-full" />
+                </figure>
+              ))}
+            </div>
+          )}
 
           <div className="mt-14 border-t border-border/40 pt-8">
             <p className="mb-3 font-body text-xs font-semibold uppercase tracking-widest text-muted-foreground">
