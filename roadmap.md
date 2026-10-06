@@ -14,3 +14,6 @@
 - [x] Adicionar quatro páginas de refúgios para totalizar nove, sem inventar informações de imóveis
 - [x] Mostrar aviso de loja em construção na Shop
 - [ ] Fotos reais de cada refúgio (aguardando envio)
+- [ ] Atualizar capa da Casa da Lira e capa inicial com praia enviada
+- [ ] Substituir fotos de Momentos pelas nove fotos enviadas, sem legendas
+- [ ] Exibir casas Indianápolis e Internacional como detalhes em breve
