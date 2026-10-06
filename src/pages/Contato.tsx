@@ -457,6 +457,13 @@ const Contato = () => {
               <Phone className="h-5 w-5 text-accent" />
               +1 (216) 337-0184
             </a>
+            <a
+              href="tel:+5519996116169"
+              className="flex items-center gap-2 transition hover:text-accent"
+            >
+              <Phone className="h-5 w-5 text-accent" />
+              +55 (19) 99611-6169 <span className="opacity-70">{language === 'pt' ? '(Exclusivo suporte SC)' : '(SC support only)'}</span>
+            </a>
           </div>
         </div>
       </section>

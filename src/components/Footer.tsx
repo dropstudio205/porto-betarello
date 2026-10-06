@@ -2,7 +2,7 @@ import { Instagram, Mail, Phone } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <footer id="contact" className="bg-primary text-primary-foreground py-16">
@@ -41,6 +41,13 @@ const Footer = () => {
               >
                 <Phone className="w-4 h-4" />
                 +1 (216) 337-0184
+              </a>
+            <a
+                href="tel:+5519996116169"
+                className="flex items-center justify-center gap-2 font-body text-sm text-primary-foreground/80 hover:text-accent transition-colors"
+              >
+                <Phone className="w-4 h-4" />
+                +55 (19) 99611-6169 <span className="opacity-70">{language === 'pt' ? '(Exclusivo suporte SC)' : '(SC support only)'}</span>
               </a>
             </div>
           </div>
