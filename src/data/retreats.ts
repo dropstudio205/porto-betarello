@@ -24,6 +24,15 @@ import moradaPinheira6 from '@/assets/morada-da-pinheira-2485.jpg.asset.json';
 import moradaPinheira7 from '@/assets/morada-da-pinheira-2490.jpg.asset.json';
 import moradaPinheira8 from '@/assets/morada-da-pinheira-2500.jpg.asset.json';
 import moradaPinheira9 from '@/assets/morada-da-pinheira-2504.jpg.asset.json';
+import moradaSol1 from '@/assets/morada-do-sol-IMG_2553.jpg.asset.json';
+import moradaSol2 from '@/assets/morada-do-sol-IMG_2544.jpg.asset.json';
+import moradaSol3 from '@/assets/morada-do-sol-IMG_2558.jpg.asset.json';
+import moradaSol4 from '@/assets/morada-do-sol-IMG_2559.jpg.asset.json';
+import moradaSol5 from '@/assets/morada-do-sol-IMG_2561.jpg.asset.json';
+import moradaSol6 from '@/assets/morada-do-sol-IMG_2572.jpg.asset.json';
+import moradaSol7 from '@/assets/morada-do-sol-IMG_2587.jpg.asset.json';
+import moradaSol8 from '@/assets/morada-do-sol-IMG_2580.jpg.asset.json';
+import moradaSol9 from '@/assets/morada-do-sol-IMG_2540.jpg.asset.json';
 
 export type LocalizedText = { pt: string; en: string };
 export interface RetreatSection { title: LocalizedText; body: LocalizedText }
@@ -131,7 +140,7 @@ export const retreats: Retreat[] = [
     location: 'Pinheira, Palhoça – SC',
     mapQuery: 'Rua Paulo Manoel dos Santos, 3605, Pinheira, Palhoça, SC',
     rooms: 2, beds: 3, baths: 1, guests: 6,
-    images: rotate(1),
+    images: [moradaSol1.url, moradaSol2.url, moradaSol3.url, moradaSol4.url, moradaSol5.url, moradaSol6.url, moradaSol7.url, moradaSol8.url, moradaSol9.url],
     airbnbUrl: 'https://www.airbnb.com.br/rooms/1492775160954091250',
     contactPhone: BR_PHONE,
     description: T(
