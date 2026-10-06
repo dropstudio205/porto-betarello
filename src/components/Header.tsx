@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Instagram } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
+import logoBetarello from '@/assets/logo-porto-betarello.png.asset.json';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,9 +28,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" onClick={closeMenu} className="flex items-center gap-2">
-            <span className="font-display text-xl md:text-2xl font-semibold text-primary">
-              Porto Betarello
-            </span>
+            <img
+              src={logoBetarello.url}
+              alt="Porto Betarello"
+              className="h-10 md:h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

@@ -4,7 +4,7 @@ import { Bed, Bath, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import heroBg from '@/assets/hero-bg.jpg';
+import heroBg from '@/assets/refugios-hero.jpg.asset.json';
 import { retreats } from '@/data/retreats';
 
 const Refugios = () => {
@@ -36,7 +36,7 @@ const Refugios = () => {
 
       {/* Page Hero */}
       <section className="relative h-[70vh] min-h-[500px] flex items-center justify-center overflow-hidden mt-16">
-        <img src={heroBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={heroBg.url} alt="" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-primary/50" />
         <div className="relative z-10 container-luxury text-center text-primary-foreground max-w-3xl">
           <motion.div
