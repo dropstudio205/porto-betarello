@@ -2,12 +2,11 @@ import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Bath, Bed, Check, ExternalLink, MapPin, MessageCircle, Users } from 'lucide-react';
+import { ArrowLeft, Bath, Bed, BedDouble, Check, ExternalLink, MapPin, MessageCircle, Users } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { getRetreatBySlug } from '@/data/retreats';
 
-const WHATSAPP_NUMBER = '5519999169958';
 
 const RetreatDetail = () => {
   const { slug } = useParams();
@@ -22,6 +21,7 @@ const RetreatDetail = () => {
     about: { pt: 'Sobre este refúgio', en: 'About this retreat' },
     rooms: { pt: retreat.rooms === 1 ? 'quarto' : 'quartos', en: retreat.rooms === 1 ? 'bedroom' : 'bedrooms' },
     baths: { pt: retreat.baths === 1 ? 'banheiro' : 'banheiros', en: retreat.baths === 1 ? 'bathroom' : 'bathrooms' },
+    beds: { pt: retreat.beds === 1 ? 'cama' : 'camas', en: retreat.beds === 1 ? 'bed' : 'beds' },
     guests: { pt: retreat.guests === 1 ? 'hóspede' : 'hóspedes', en: retreat.guests === 1 ? 'guest' : 'guests' },
     features: { pt: 'O que este lugar oferece', en: 'What this place offers' },
     airbnb: { pt: 'Link do Airbnb em breve', en: 'Airbnb link coming soon' },
@@ -36,8 +36,8 @@ const RetreatDetail = () => {
   const whatsappMessage = language === 'pt'
     ? `Olá! Gostaria de saber mais sobre o refúgio ${retreat.name}.`
     : `Hello! I would like to know more about ${retreat.name}.`;
-  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
-  const mapUrl = `https://www.google.com/maps?q=${encodeURIComponent(retreat.mapQuery)}&z=12&output=embed`;
+  const whatsappUrl = `https://wa.me/${retreat.contactPhone}?text=${encodeURIComponent(whatsappMessage)}`;
+  const mapUrl = `https://www.google.com/maps?q=${encodeURIComponent(retreat.mapQuery)}&z=15&output=embed`;
   const title = `${retreat.name} | Porto Betarello`;
 
   return (
@@ -80,7 +80,7 @@ const RetreatDetail = () => {
               <img src={retreat.images[selectedPhoto]} alt={`${retreat.name} — ${language === 'pt' ? `foto ${selectedPhoto + 1}` : `photo ${selectedPhoto + 1}`}`} className="h-full w-full object-cover" />
             </div>
             {retreat.comingSoon && <p className="mt-3 text-sm text-muted-foreground">{language === 'pt' ? 'Imagens ilustrativas — fotos deste refúgio em breve.' : 'Illustrative images — photos of this retreat coming soon.'}</p>}
-            <div className="mt-3 grid grid-cols-4 gap-3">
+            <div className="mt-3 flex snap-x gap-3 overflow-x-auto pb-2">
               {retreat.images.map((image, index) => (
                 <Button
                   key={image}
@@ -89,7 +89,7 @@ const RetreatDetail = () => {
                   onClick={() => setSelectedPhoto(index)}
                   aria-label={language === 'pt' ? `Ver foto ${index + 1}` : `View photo ${index + 1}`}
                   aria-pressed={selectedPhoto === index}
-                  className={`h-auto overflow-hidden rounded-md border-2 p-0 focus-visible:ring-offset-1 ${selectedPhoto === index ? 'border-accent' : 'border-transparent opacity-75 hover:opacity-100'}`}
+                  className={`h-auto w-28 shrink-0 snap-start overflow-hidden md:w-36 rounded-md border-2 p-0 focus-visible:ring-offset-1 ${selectedPhoto === index ? 'border-accent' : 'border-transparent opacity-75 hover:opacity-100'}`}
                 >
                   <img src={image} alt="" className="aspect-[4/3] h-full w-full object-cover" />
                 </Button>
@@ -102,9 +102,16 @@ const RetreatDetail = () => {
             {!retreat.comingSoon && <div className="mt-5 flex flex-wrap gap-x-6 gap-y-3 border-y border-border/40 py-5 font-body text-sm text-muted-foreground">
               <span className="flex items-center gap-2"><Bed className="h-5 w-5 text-accent" />{retreat.rooms} {text.rooms[language]}</span>
               <span className="flex items-center gap-2"><Bath className="h-5 w-5 text-accent" />{retreat.baths} {text.baths[language]}</span>
-              <span className="flex items-center gap-2"><Users className="h-5 w-5 text-accent" />{retreat.guests} {text.guests[language]}</span>
+              {retreat.beds && <span className="flex items-center gap-2"><BedDouble className="h-5 w-5 text-accent" />{retreat.beds} {text.beds[language]}</span>}
+              {retreat.guests && <span className="flex items-center gap-2"><Users className="h-5 w-5 text-accent" />{retreat.guests} {text.guests[language]}</span>}
             </div>}
             <p className="mt-6 font-body text-base leading-relaxed text-muted-foreground">{retreat.description[language]}</p>
+            {retreat.sections?.map((section) => (
+              <div key={section.title.pt} className="mt-6">
+                <h3 className="font-display text-lg font-semibold text-primary">{section.title[language]}</h3>
+                <p className="mt-2 font-body text-sm leading-relaxed text-muted-foreground">{section.body[language]}</p>
+              </div>
+            ))}
 
             {!retreat.comingSoon && <><h3 className="mt-8 font-display text-xl font-semibold text-primary">{text.features[language]}</h3>
             <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
@@ -131,7 +138,7 @@ const RetreatDetail = () => {
         </div>
       </section>
 
-      {!retreat.comingSoon && <section className="bg-muted/50 py-20 md:py-24">
+      {!retreat.comingSoon && retreat.mapQuery && <section className="bg-muted/50 py-20 md:py-24">
         <div className="container-luxury">
           <div className="mb-8 max-w-2xl">
             <h2 className="font-display text-3xl font-bold text-primary md:text-4xl">{text.location[language]}</h2>
