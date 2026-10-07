@@ -39,6 +39,10 @@ const RetreatDetail = () => {
   const whatsappUrl = `https://wa.me/${retreat.contactPhone}?text=${encodeURIComponent(whatsappMessage)}`;
   const mapUrl = `https://www.google.com/maps?q=${encodeURIComponent(retreat.mapQuery)}&z=15&output=embed`;
   const title = `${retreat.name} | Porto Betarello`;
+  const listingUrl = retreat.furnishedFinderUrl ?? retreat.airbnbUrl;
+  const listingLabel = retreat.furnishedFinderUrl
+    ? (language === 'pt' ? 'Ver no Furnished Finder' : 'View on Furnished Finder')
+    : (language === 'pt' ? 'Ver no Airbnb' : 'View on Airbnb');
 
   return (
     <>
@@ -123,9 +127,9 @@ const RetreatDetail = () => {
             </ul></>}
 
             <div className="mt-9 grid gap-3">
-              {retreat.comingSoon ? null : retreat.airbnbUrl ? (
+              {retreat.comingSoon ? null : listingUrl ? (
                 <Button asChild size="lg" className="w-full">
-                  <a href={retreat.airbnbUrl} target="_blank" rel="noopener noreferrer"><ExternalLink />{language === 'pt' ? 'Ver no Airbnb' : 'View on Airbnb'}</a>
+                  <a href={listingUrl} target="_blank" rel="noopener noreferrer"><ExternalLink />{listingLabel}</a>
                 </Button>
               ) : (
                 <Button size="lg" className="w-full" disabled><ExternalLink />{text.airbnb[language]}</Button>
