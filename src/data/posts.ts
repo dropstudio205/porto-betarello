@@ -209,25 +209,56 @@ export const blogPosts: BlogPost[] = [
     ],
   },
   {
-    slug: "o-melhor-cafe-da-manha-do-interior",
-    image: gallery5,
-    title: { pt: "O melhor café da manhã do interior", en: "The best countryside breakfast" },
+    slug: "florianopolis-o-novo-vale-do-silicio",
+    image: "https://images.pexels.com/photos/7730287/pexels-photo-7730287.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    title: {
+      pt: "Florianópolis se tornou o novo Vale do Silício?",
+      en: "Has Florianópolis become the new Silicon Valley?",
+    },
     excerpt: {
-      pt: "Pão de queijo quentinho, café passado na hora e tempo de sobra.",
-      en: "Warm cheese bread, freshly brewed coffee and time to spare.",
+      pt: "Entre praias, startups e empresas de tecnologia, Florianópolis construiu um dos ecossistemas de inovação mais importantes do Brasil.",
+      en: "Between beaches, startups and technology companies, Florianópolis has built one of Brazil’s most important innovation ecosystems.",
     },
     content: [
       {
-        pt: "Pão de queijo quentinho, café passado na hora e tempo de sobra. O café da manhã no interior de São Paulo é uma cerimônia simples que muda o tom do dia inteiro.",
-        en: "Warm cheese bread, freshly brewed coffee and time to spare. Breakfast in the São Paulo countryside is a simple ceremony that changes the tone of the whole day.",
+        pt: "Você provavelmente já ouviu alguém chamar Florianópolis de “novo Vale do Silício”. A comparação pode parecer exagerada à primeira vista. Afinal, o que uma ilha brasileira tem a ver com a região que ajudou a criar empresas como Apple, Google e Meta? Mas quando olhamos para os números e para a história do ecossistema tecnológico da cidade, a comparação começa a fazer um pouco mais de sentido.",
+        en: "You have probably heard someone call Florianópolis the “new Silicon Valley”. At first, the comparison may sound exaggerated. After all, what does a Brazilian island have in common with the region that helped create companies such as Apple, Google and Meta? But when we look at the numbers and the history of the city’s technology ecosystem, the comparison starts to make a little more sense.",
       },
       {
-        pt: "Em Amparo, recomendamos acordar cedo, abrir as janelas e deixar o dia começar devagar. A cidade tem uma tradição acolhedora de padarias e cafés que vale explorar — e o passeio pelo centro histórico é a sobremesa perfeita.",
-        en: "In Amparo, we recommend waking up early, opening the windows and letting the day begin slowly. The city has a welcoming tradition of bakeries and cafés worth exploring — and a stroll through the historic center is the perfect dessert.",
+        pt: "Florianópolis não se tornou um polo de tecnologia de uma hora para outra. O ecossistema foi construído ao longo de décadas, aproximando universidades, pesquisadores, empreendedores, investidores, empresas e iniciativas públicas. A criação de centros de inovação, parques tecnológicos e programas de apoio ajudou a transformar a cidade em um ambiente onde novas empresas podem nascer, encontrar talentos e crescer.",
+        en: "Florianópolis did not become a technology hub overnight. Its ecosystem was built over decades by bringing together universities, researchers, entrepreneurs, investors, companies and public initiatives. The creation of innovation centres, technology parks and support programmes helped transform the city into an environment where new companies can be created, find talent and grow.",
       },
       {
-        pt: "Nos nossos refúgios em Amparo você encontra cozinha equipada para preparar tudo com calma, do jeito que a sua família gosta. Porque férias boas são aquelas em que até o café da manhã vira memória.",
-        en: "In our retreats in Amparo you will find an equipped kitchen to prepare everything at your own pace, just the way your family likes it. Because good vacations are those where even breakfast becomes a memory.",
+        pt: "E os resultados já são grandes. Segundo o Observatório ACATE, o setor de tecnologia representa atualmente cerca de 21% do PIB de Florianópolis e movimenta aproximadamente R$ 14 bilhões. A cidade também possui uma das maiores densidades de empresas de tecnologia do país, com 12,6 empresas do setor para cada mil habitantes.",
+        en: "And the results are already significant. According to the ACATE Observatory, the technology sector currently represents around 21% of Florianópolis’ GDP and generates approximately R$ 14 billion in revenue. The city also has one of the highest densities of technology companies in Brazil, with 12.6 technology companies for every thousand inhabitants.",
+      },
+      {
+        pt: "Não é apenas uma questão de empresas. Em 2024, Florianópolis recebeu oficialmente o título de Capital Nacional das Startups, por meio da Lei Federal nº 14.955. O reconhecimento colocou no papel algo que o mercado já vinha percebendo: a cidade havia construído uma concentração incomum de startups e negócios inovadores.",
+        en: "It is not only about companies. In 2024, Florianópolis was officially recognised as Brazil’s National Capital of Startups through Federal Law No. 14,955. The title formalised something the market had already been noticing: the city had built an unusual concentration of startups and innovative businesses.",
+      },
+      {
+        pt: "Outro ingrediente importante está nas universidades. A presença de instituições de ensino e pesquisa, especialmente da Universidade Federal de Santa Catarina, ajuda a formar profissionais qualificados e aproximar conhecimento científico do mercado. Quando pesquisadores, estudantes e empreendedores conseguem circular pelo mesmo ecossistema, ideias têm mais chances de sair do papel.",
+        en: "Another important ingredient is the presence of universities. Educational and research institutions, especially the Federal University of Santa Catarina, help train qualified professionals and bring scientific knowledge closer to the market. When researchers, students and entrepreneurs can move within the same ecosystem, ideas have a greater chance of becoming real businesses.",
+      },
+      {
+        pt: "É aí que entram lugares como o Sapiens Parque e os Centros de Inovação da ACATE. Eles funcionam como pontos de encontro para empresas, startups, investidores, pesquisadores e profissionais. Não são apenas escritórios bonitos: fazem parte de uma infraestrutura criada para estimular conexões, eventos, capacitação, inovação e novos negócios.",
+        en: "This is where places such as Sapiens Parque and ACATE’s Innovation Centres come in. They act as meeting points for companies, startups, investors, researchers and professionals. They are not simply attractive office spaces: they are part of an infrastructure designed to encourage connections, events, training, innovation and new business opportunities.",
+      },
+      {
+        pt: "E existe ainda uma característica que dificilmente pode ser colocada em uma planilha: qualidade de vida. Florianópolis consegue reunir um ecossistema profissional altamente conectado com uma rotina que inclui praias, trilhas, lagoas, natureza e uma vida cultural própria. Para profissionais de tecnologia e empreendedores, isso pode fazer diferença na hora de escolher onde viver e construir uma empresa.",
+        en: "There is also a characteristic that is difficult to put into a spreadsheet: quality of life. Florianópolis combines a highly connected professional ecosystem with a lifestyle that includes beaches, trails, lagoons, nature and its own cultural scene. For technology professionals and entrepreneurs, this can make a difference when choosing where to live and build a company.",
+      },
+      {
+        pt: "Talvez seja justamente essa combinação que tornou Florianópolis tão interessante para o setor. Não é apenas uma cidade onde existem empresas de tecnologia. É uma cidade onde tecnologia, empreendedorismo, universidades, investimento e qualidade de vida começaram a se encontrar no mesmo lugar.",
+        en: "Perhaps it is precisely this combination that has made Florianópolis so interesting to the technology sector. It is not simply a city where technology companies exist. It is a city where technology, entrepreneurship, universities, investment and quality of life have begun to converge in the same place.",
+      },
+      {
+        pt: "Então, Florianópolis é realmente o novo Vale do Silício? Talvez a comparação precise de algumas aspas. A cidade ainda está muito longe da escala econômica e global de Silicon Valley. Mas dizer que Florianópolis construiu um dos principais ecossistemas de tecnologia e startups do Brasil não é exagero. E os números mostram que essa história ainda está sendo escrita.",
+        en: "So, is Florianópolis really the new Silicon Valley? Perhaps the comparison needs quotation marks. The city is still far from Silicon Valley’s global economic scale. But saying that Florianópolis has built one of Brazil’s leading technology and startup ecosystems is not an exaggeration. And the numbers suggest that this story is still being written.",
+      },
+      {
+        pt: "No fim das contas, talvez o mais interessante não seja descobrir se Florianópolis será o próximo Vale do Silício. É perceber que uma cidade conhecida mundialmente pelas suas praias conseguiu construir, ao mesmo tempo, uma reputação como destino para quem quer criar, empreender e trabalhar com tecnologia.",
+        en: "In the end, perhaps the most interesting question is not whether Florianópolis will become the next Silicon Valley. It is recognising that a city known worldwide for its beaches has simultaneously built a reputation as a destination for people who want to create, build businesses and work in technology.",
       },
     ],
   },
