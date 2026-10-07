@@ -160,7 +160,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     slug: "por-que-tanta-gente-esta-indo-morar-em-palhoca",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
+    image: "https://t4.ftcdn.net/jpg/05/22/88/47/360_F_522884795_Xn2e7NIUE934FSMMe2tIVhTKMViz8s4O.jpg",
     title: {
       pt: "Por que tanta gente está indo morar em Palhoça?",
       en: "Why are so many people moving to Palhoça?",
