@@ -324,33 +324,6 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
-
-  {
-    slug: "por-que-toda-familia-precisa-de-uma-casa-de-temporada",
-    image: gallery3,
-    title: {
-      pt: "Por que toda família precisa de uma casa de temporada",
-      en: "Why every family needs a vacation home",
-    },
-    excerpt: {
-      pt: "Não é luxo: é investimento em memória.",
-      en: "It is not luxury: it is an investment in memory.",
-    },
-    content: [
-      {
-        pt: "Não é luxo: é investimento em memória. Uma casa de temporada é onde a família finalmente divide o mesmo teto, o mesmo café e a mesma gargalhada — coisa rara na correria do dia a dia.",
-        en: "It is not luxury: it is an investment in memory. A vacation home is where the family finally shares the same roof, the same coffee and the same laughter — a rare thing in the rush of everyday life.",
-      },
-      {
-        pt: "Diferente de um hotel, uma casa inteira dá liberdade: cozinhar junto, acordar sem despertador, brincar no quintal, conversar até tarde sem hora para acabar. São detalhes pequenos que constroem lembranças grandes.",
-        en: "Unlike a hotel, an entire house gives you freedom: cooking together, waking up without an alarm, playing in the yard, talking late into the night with no closing time. Small details that build big memories.",
-      },
-      {
-        pt: "É por isso que cuidamos dos nossos refúgios como cuidamos da nossa própria casa. Porque sabemos que, por alguns dias, ela será a casa da sua família também.",
-        en: "That is why we take care of our retreats the way we take care of our own home. Because we know that, for a few days, it will be your family home too.",
-      },
-    ],
-  },
 ];
 
 export const getPostBySlug = (slug: string | undefined) => blogPosts.find((post) => post.slug === slug);
