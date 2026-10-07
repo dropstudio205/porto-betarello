@@ -43,6 +43,7 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+
   {
     slug: "curiosidade-literaria-grande-sertao-veredas",
     image: rosaCover.url,
@@ -158,6 +159,7 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+
   {
     slug: "por-que-tanta-gente-esta-indo-morar-em-palhoca",
     image: "https://t4.ftcdn.net/jpg/05/22/88/47/360_F_522884795_Xn2e7NIUE934FSMMe2tIVhTKMViz8s4O.jpg",
@@ -208,6 +210,7 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+
   {
     slug: "florianopolis-o-novo-vale-do-silicio",
     image: "https://images.pexels.com/photos/7730287/pexels-photo-7730287.jpeg?auto=compress&cs=tinysrgb&w=1600",
@@ -262,32 +265,66 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+
   {
     slug: "roteiro-de-praia-para-quem-odeia-multidao",
-    image: tipTrail,
+    image: "https://images.unsplash.com/photo-1589407431324-7d0992811178?auto=format&fit=crop&fm=jpg&q=85&w=1600",
     title: {
       pt: "Roteiro de praia para quem odeia multidão",
-      en: "A beach itinerary for those who hate crowds",
+      en: "A beach itinerary for people who hate crowds",
     },
     excerpt: {
-      pt: "A Grande Florianópolis ainda guarda cantinhos tranquilos para quem sabe onde procurar.",
-      en: "Greater Florianópolis still keeps quiet corners for those who know where to look.",
+      pt: "Dá para aproveitar o litoral de Palhoça sem passar o dia espremido na areia. O segredo está no horário, na escolha da praia e em saber onde ir.",
+      en: "You can enjoy Palhoça’s coastline without spending the day squeezed onto a crowded beach. The secret is choosing the right time, beach and route.",
     },
     content: [
       {
-        pt: "A Grande Florianópolis ainda guarda cantinhos tranquilos para quem sabe onde procurar. Praias escondidas entre trilhas, mirantes fora do circuito óbvio e pôr do sol sem competição por espaço na areia.",
-        en: "Greater Florianópolis still keeps quiet corners for those who know where to look. Beaches hidden behind trails, viewpoints off the obvious circuit and sunsets with no competition for a spot on the sand.",
+        pt: "Se a ideia de passar horas procurando vaga, enfrentar trânsito e chegar à praia para descobrir que não existe espaço nem para estender a canga já acaba com a sua vontade de viajar, temos uma boa notícia: o litoral de Palhoça tem opções para quem prefere uma experiência mais tranquila.",
+        en: "If the idea of spending hours looking for parking, sitting in traffic and arriving at the beach only to find there is barely enough space to lay down your towel already ruins the trip for you, there is good news: Palhoça’s coastline has options for those who prefer a quieter experience.",
       },
       {
-        pt: "A nossa dica de ouro: vá na maré certa, chegue cedo e leve água e lanche. As melhores experiências aqui não estão à venda — estão a uma caminhada de distância.",
-        en: "Our golden tip: go with the right tide, arrive early and bring water and snacks. The best experiences here are not for sale — they are a walk away.",
+        pt: "É claro que existe uma regra importante: no verão e principalmente nos fins de semana, as praias mais conhecidas ficam movimentadas. Não existe praia secreta capaz de garantir uma faixa de areia vazia em plena alta temporada. Mas escolher bem o horário e montar um roteiro inteligente muda completamente a experiência.",
+        en: "Of course, there is one important rule: during summer, especially at weekends, the best-known beaches get busy. There is no secret beach that can guarantee an empty stretch of sand in peak season. But choosing the right time and planning your route wisely can completely change the experience.",
       },
       {
-        pt: "Na nossa página de Dicas reunimos trilhas, mirantes e praias que amamos. É o nosso conhecimento de gerações, compartilhado para que a sua viagem tenha o mesmo encanto das nossas.",
-        en: "On our Tips page we gathered the trails, viewpoints and beaches we love. It is our generations-old knowledge, shared so that your trip has the same charm as ours.",
+        pt: "Comece cedo pela Praia de Cima, na região da Pinheira. Pequena, cercada por vegetação e com águas claras, ela é uma ótima primeira parada para quem quer começar o dia com calma. Chegar pela manhã também significa aproveitar a praia antes que o movimento aumente.",
+        en: "Start early at Praia de Cima, in the Pinheira area. Small, surrounded by vegetation and known for its clear waters, it is a great first stop for anyone looking to begin the day peacefully. Arriving in the morning also means enjoying the beach before the crowds build up.",
+      },
+      {
+        pt: "Depois, siga para a Praia de Baixo, na Pinheira. A região tem uma atmosfera diferente, com barcos de pesca, uma enseada mais protegida e estrutura para comer alguma coisa ou simplesmente caminhar pela areia. Se você gosta de observar o movimento sem necessariamente fazer parte dele, é uma boa parada.",
+        en: "Then head to Praia de Baixo, in Pinheira. The area has a different atmosphere, with fishing boats, a more sheltered bay and places to grab something to eat or simply walk along the sand. If you enjoy watching the world go by without necessarily being in the middle of it, it is a great stop.",
+      },
+      {
+        pt: "Na hora do almoço, não precisa transformar o passeio em uma corrida contra o relógio. Aproveite para comer com calma e descansar. Afinal, o objetivo desse roteiro é justamente não transformar um dia de praia em uma operação militar.",
+        en: "At lunchtime, there is no need to turn the trip into a race against the clock. Take your time to eat and rest. After all, the whole point of this itinerary is not to turn a beach day into a military operation.",
+      },
+      {
+        pt: "À tarde, uma boa alternativa é seguir para a Praia do Sonho e explorar a região com mais tranquilidade. A praia fica em uma área cercada por morros e natureza e pode ser uma opção interessante para quem quer terminar o dia longe do ritmo mais intenso de algumas das praias mais famosas da região.",
+        en: "In the afternoon, a good option is to head towards Praia do Sonho and explore the area at a slower pace. The beach is surrounded by hills and nature and can be an interesting choice for those who want to finish the day away from the busier rhythm of some of the region’s most famous beaches.",
+      },
+      {
+        pt: "E existe um truque ainda mais simples para quem realmente não gosta de multidão: troque o horário de pico pelo começo ou pelo fim do dia. Um banho de mar pela manhã, uma caminhada no fim da tarde e um pôr do sol sem pressa podem ser muito mais agradáveis do que tentar aproveitar tudo entre 10h e 16h.",
+        en: "There is an even simpler trick for people who genuinely dislike crowds: swap peak hours for the beginning or end of the day. A morning swim, an afternoon walk and a slow sunset can be much more enjoyable than trying to do everything between 10am and 4pm.",
+      },
+      {
+        pt: "Outra possibilidade é viajar fora dos períodos mais disputados. Na baixa temporada, o litoral muda de ritmo. As praias ficam mais tranquilas, o trânsito tende a ser menos intenso e você consegue enxergar melhor aquilo que normalmente desaparece atrás de guarda-sóis, cadeiras e caixas térmicas: a própria paisagem.",
+        en: "Another option is travelling outside the busiest periods. During the low season, the coastline changes pace. Beaches become quieter, traffic tends to be lighter and you can better appreciate what is normally hidden behind umbrellas, chairs and coolers: the landscape itself.",
+      },
+      {
+        pt: "No fim, talvez o segredo para gostar de praia não seja encontrar uma praia completamente vazia. É encontrar uma praia que combine com o jeito que você gosta de viajar.",
+        en: "In the end, perhaps the secret to enjoying the beach is not finding a completely empty beach. It is finding a beach that matches the way you like to travel.",
+      },
+      {
+        pt: "Se você prefere acordar sem pressa, tomar café, chegar cedo ao mar, almoçar tranquilamente e voltar para um lugar confortável quando o movimento aumenta, Palhoça pode ser exatamente o tipo de destino que estava procurando.",
+        en: "If you prefer waking up without rushing, having breakfast, getting to the sea early, enjoying a relaxed lunch and returning to a comfortable place when the crowds increase, Palhoça might be exactly the kind of destination you have been looking for.",
+      },
+      {
+        pt: "Porque viajar também pode significar isso: não fazer tudo, não correr para todos os lugares e não precisar disputar espaço. Às vezes, o melhor roteiro é simplesmente aquele que deixa você respirar.",
+        en: "Because travelling can also mean this: not doing everything, not rushing everywhere and not having to fight for space. Sometimes, the best itinerary is simply the one that gives you room to breathe.",
       },
     ],
   },
+
   {
     slug: "por-que-toda-familia-precisa-de-uma-casa-de-temporada",
     image: gallery3,
