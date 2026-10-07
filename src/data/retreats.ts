@@ -70,6 +70,16 @@ import casaDaLira7 from '@/assets/casa-da-lira-7.jpg.asset.json';
 import casaDaLira8 from '@/assets/casa-da-lira-8.jpg.asset.json';
 import casaDaLira9 from '@/assets/casa-da-lira-9.jpg.asset.json';
 import casaDaLira10 from '@/assets/casa-da-lira-10.jpg.asset.json';
+import indianapolis1 from '@/assets/casa-indianapolis-1.avif.asset.json';
+import indianapolis2 from '@/assets/casa-indianapolis-2.avif.asset.json';
+import indianapolis3 from '@/assets/casa-indianapolis-3.avif.asset.json';
+import indianapolis4 from '@/assets/casa-indianapolis-4.jpeg.asset.json';
+import indianapolis5 from '@/assets/casa-indianapolis-5.avif.asset.json';
+import indianapolis6 from '@/assets/casa-indianapolis-6.avif.asset.json';
+import indianapolis7 from '@/assets/casa-indianapolis-7.avif.asset.json';
+import indianapolis8 from '@/assets/casa-indianapolis-8.avif.asset.json';
+import indianapolis9 from '@/assets/casa-indianapolis-9.jpeg.asset.json';
+import indianapolis10 from '@/assets/casa-indianapolis-10.jpeg.asset.json';
 
 
 export type LocalizedText = { pt: string; en: string };
@@ -91,6 +101,7 @@ export interface Retreat {
   sections?: RetreatSection[];
   highlights: LocalizedText[];
   airbnbUrl?: string;
+  furnishedFinderUrl?: string;
   /** WhatsApp number (digits only) for direct contact */
   contactPhone: string;
 }
@@ -319,20 +330,41 @@ export const retreats: Retreat[] = [
   {
     slug: 'casa-indianapolis',
     name: 'Casa Indianápolis',
-    comingSoon: true,
     location: 'Indianápolis – EUA',
     mapQuery: 'Indianapolis, Indiana, USA',
     rooms: 2, baths: 1,
-    images: rotate(4),
+    images: [indianapolis1.url, indianapolis2.url, indianapolis3.url, indianapolis4.url, indianapolis5.url, indianapolis6.url, indianapolis7.url, indianapolis8.url, indianapolis9.url, indianapolis10.url],
+    furnishedFinderUrl: 'https://www.furnishedfinder.com/property/874692_1?moveDate=%7B%22in%22%3A%222026-12-20%22%7D',
     contactPhone: US_PHONE,
     description: T(
-      'Em breve daremos mais detalhes sobre a Casa Indianápolis, nosso refúgio nos Estados Unidos.',
-      'More details about Casa Indianápolis, our retreat in the United States, are coming soon.',
+      'Relaxe e relaxe neste espaço calmo e elegante.',
+      'Relax and unwind in this calm, elegant space.',
     ),
+    sections: [
+      { title: S.space, body: T(
+        'Perto das principais áreas comerciais e fácil acesso à Interestadual I-69, I-65, I-465, I-70, I-74.',
+        'Close to major shopping areas, with easy access to Interstates I-69, I-65, I-465, I-70 and I-74.',
+      ) },
+      { title: S.access, body: T(
+        'Acesso total aos 2 quartos, banheiros, cozinha completa e sala de estar com lareira para noites aconchegantes de inverno!',
+        'Full access to the two bedrooms, bathrooms, fully equipped kitchen and living room with a fireplace for cozy winter evenings!',
+      ) },
+      { title: S.notes, body: T(
+        'Área tranquila em condomínio com regras rígidas para garantir que sua estadia seja segura e livre de ruídos!',
+        'A quiet community with strict rules to keep your stay safe and free from noise!',
+      ) },
+    ],
     highlights: [
-      T('Local privilegiado', 'Prime location'),
-      T('2 quartos e 1 banheiro', '2 bedrooms and 1 bathroom'),
-      T('Atendimento em português', 'Portuguese-speaking host'),
+      T('Cozinha', 'Kitchen'),
+      T('Wi-Fi', 'Wi-Fi'),
+      T('Espaço de trabalho exclusivo', 'Dedicated workspace'),
+      T('Estacionamento gratuito no local', 'Free parking on premises'),
+      T('TV', 'TV'),
+      T('Máquina de lavar', 'Washing machine'),
+      T('Secadora (na unidade)', 'Dryer (in unit)'),
+      T('Ar-condicionado', 'Air conditioning'),
+      T('Banheira', 'Bathtub'),
+      T('Lareira interna', 'Indoor fireplace'),
     ],
   },
   {
