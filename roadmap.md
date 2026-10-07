@@ -1,6 +1,6 @@
 # Roadmap
 
-- [ ] Atualizar Casa Indianápolis com dez fotos, descrição bilíngue, comodidades, WhatsApp e Furnished Finder
+- [x] Atualizar Casa Indianápolis com dez fotos, descrição bilíngue, comodidades, WhatsApp e Furnished Finder
 
 - [x] Usar foto do prato no blog Arroz, feijão; curiosidade literária em segundo com texto e fotos enviados
 - [x] Substituir capas de Contato e Shop por fotos distintas dos nossos imóveis
