@@ -5,6 +5,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import poster from '@/assets/gallery-2.jpg';
 import retreatVideo from '@/assets/videos/retreat-moment.mp4.asset.json';
+import retreatWebm from '@/assets/videos/retreat-moment.webm.asset.json';
 
 const localVideo = retreatVideo.url;
 
@@ -54,7 +55,10 @@ const RetreatMoment = () => {
             <div className="absolute left-1/2 top-3 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-primary" aria-hidden="true" />
             <div className="relative aspect-[9/16] overflow-hidden rounded-[1.8rem] bg-muted">
               {localVideo ? (
-                <video src={localVideo} poster={poster} autoPlay muted loop playsInline className="h-full w-full object-cover" aria-label={language === 'pt' ? 'Vídeo dos refúgios Porto Betarello' : 'Porto Betarello retreat video'} />
+                <video poster={poster} autoPlay muted loop playsInline className="h-full w-full object-cover" aria-label={language === 'pt' ? 'Vídeo dos refúgios Porto Betarello' : 'Porto Betarello retreat video'}>
+                  <source src={retreatWebm.url} type="video/webm" />
+                  <source src={localVideo} type="video/mp4" />
+                </video>
               ) : (
                 <img src={poster} alt={language === 'pt' ? 'Prévia visual de momentos nos refúgios' : 'Visual preview of moments at the retreats'} className="h-full w-full object-cover" />
               )}
