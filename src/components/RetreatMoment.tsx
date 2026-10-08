@@ -4,11 +4,10 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import poster from '@/assets/gallery-2.jpg';
+import retreatVideo from '@/assets/videos/retreat-moment.mp4.asset.json';
+import retreatWebm from '@/assets/videos/retreat-moment.webm.asset.json';
 
-// A local file named retreat-moment.mp4 or retreat-moment.webm in src/assets
-// automatically replaces the preview image without changing this section.
-const localVideos = import.meta.glob('../assets/retreat-moment.{mp4,webm}', { eager: true, query: '?url', import: 'default' }) as Record<string, string>;
-const localVideo = Object.values(localVideos)[0];
+const localVideo = retreatVideo.url;
 
 const RetreatMoment = () => {
   const { language } = useLanguage();
@@ -56,7 +55,10 @@ const RetreatMoment = () => {
             <div className="absolute left-1/2 top-3 z-10 h-5 w-24 -translate-x-1/2 rounded-full bg-primary" aria-hidden="true" />
             <div className="relative aspect-[9/16] overflow-hidden rounded-[1.8rem] bg-muted">
               {localVideo ? (
-                <video src={localVideo} poster={poster} autoPlay muted loop playsInline className="h-full w-full object-cover" aria-label={language === 'pt' ? 'Vídeo dos refúgios Porto Betarello' : 'Porto Betarello retreat video'} />
+                <video poster={poster} autoPlay muted loop playsInline className="h-full w-full object-cover" aria-label={language === 'pt' ? 'Vídeo dos refúgios Porto Betarello' : 'Porto Betarello retreat video'}>
+                  <source src={retreatWebm.url} type="video/webm" />
+                  <source src={localVideo} type="video/mp4" />
+                </video>
               ) : (
                 <img src={poster} alt={language === 'pt' ? 'Prévia visual de momentos nos refúgios' : 'Visual preview of moments at the retreats'} className="h-full w-full object-cover" />
               )}

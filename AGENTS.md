@@ -4,4 +4,4 @@
 
 - Keep retreat previews in the shared retreat catalog with `comingSoon`, because unconfirmed properties must not claim real amenities, locations, or availability.
 - Store external listing links by provider in the shared retreat catalog and derive the booking button label from that provider, so non-Airbnb listings are not misrepresented.
-- Use the optional local `retreat-moment.mp4` or `.webm` asset for the home phone scene, because the video will be provided later and the preview must remain usable now.
+- Use the uploaded video CDN asset pointer for the home phone scene with muted inline autoplay and looping, because the supplied clip must play without storing a binary in the repository.

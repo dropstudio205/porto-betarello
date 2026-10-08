@@ -14,12 +14,12 @@ const Refugios = () => {
     pt: {
       title: 'Refúgios em Palhoça, Florianópolis e Amparo | Porto Betarello',
       description:
-        'Alugue casas e refúgios exclusivos em Palhoça SC, Florianópolis e Amparo SP. Experiência estilo Airbnb, conforto e praticidade.',
+        'Casas e apartamentos confortáveis e aconchegantes em Palhoça SC, Florianópolis e Amparo SP. Uma estadia com o acolhimento da família Betarello.',
     },
     en: {
       title: 'Retreats in Palhoça, Florianópolis and Amparo | Porto Betarello',
       description:
-        'Rent exclusive homes and retreats in Palhoça SC, Florianópolis and Amparo SP. Airbnb-style stays with comfort and ease.',
+        'Comfortable, cozy houses and apartments in Palhoça SC, Florianópolis and Amparo SP. A warm welcome from the Betarello family.',
     },
   }[language];
 
@@ -73,8 +73,8 @@ const Refugios = () => {
             </h2>
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed mb-6">
               {language === 'pt'
-                ? 'Nossa coleção de refúgios foi escolhida a dedo pela família Betarello. Cada propriedade conta sua própria história e oferece uma experiência distinta, mas todas compartilham o mesmo compromisso com excelência, aconchego e atenção aos detalhes que nos definem.'
-                : 'Our collection of retreats was hand-picked by the Betarello family. Each property tells its own story and offers a distinct experience, but all share the same commitment to excellence, warmth and attention to detail that define us.'}
+                ? 'Nossas casas e apartamentos foram preparados com carinho pela família Betarello. Cada lugar tem sua própria história, mas todos compartilham o mesmo cuidado: oferecer conforto, aconchego e aquela sensação boa de se sentir em casa.'
+                : 'Our houses and apartments were prepared with care by the Betarello family. Each place has its own story, but all share the same care: offering comfort, warmth and that lovely feeling of being at home.'}
             </p>
             <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed italic">
               {language === 'pt'

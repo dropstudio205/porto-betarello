@@ -146,7 +146,7 @@ const RetreatDetail = () => {
         <div className="container-luxury">
           <div className="mb-8 max-w-2xl">
             <h2 className="font-display text-3xl font-bold text-primary md:text-4xl">{text.location[language]}</h2>
-            <p className="mt-4 font-body text-sm leading-relaxed text-muted-foreground md:text-base">{text.approximate[language]}</p>
+            <p className="mt-4 font-body text-sm leading-relaxed text-muted-foreground md:text-base">{['casa-do-interior', 'casa-da-lira', 'flor-da-montanha'].includes(retreat.slug) ? retreat.mapQuery : text.approximate[language]}</p>
           </div>
           <div className="overflow-hidden rounded-lg border border-border/40 bg-card shadow-elegant">
             <iframe title={`${text.location[language]} — ${retreat.name}`} src={mapUrl} className="h-[380px] w-full md:h-[480px]" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
