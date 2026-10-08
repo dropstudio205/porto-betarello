@@ -152,7 +152,7 @@ const Contato = () => {
       key: 'airbnb' as const,
       icon: Home,
       color: 'text-[#FF5A5F]',
-      href: 'https://www.airbnb.com',
+      href: 'https://www.airbnb.com.br/users/profile/1468225004283702621?previous_page_name=PdpHomeMarketplace',
     },
     {
       key: 'instagram' as const,
