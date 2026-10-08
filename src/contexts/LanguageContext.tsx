@@ -20,8 +20,8 @@ export const translations: Translations = {
 
   // Hero
   'hero.subtitle': {
-    pt: 'Refúgios de luxo preparados pela família Betarello para você desacelerar, reconectar e viver o melhor da vida.',
-    en: 'Luxury retreats crafted by the Betarello family for you to slow down, reconnect, and experience the best of life.',
+    pt: 'Casas e apartamentos confortáveis e aconchegantes, preparados pela família Betarello para você desacelerar e se sentir em casa.',
+    en: 'Comfortable, cozy houses and apartments, prepared by the Betarello family for you to slow down and feel at home.',
   },
   'hero.description': {
     pt: 'Viajar não é apenas mudar de lugar — é restaurar a mente, reduzir o estresse e criar memórias que duram para sempre. Nossos refúgios foram pensados para oferecer exatamente isso: paz, conforto e bem-estar em meio à natureza.',

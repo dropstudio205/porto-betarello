@@ -13,12 +13,12 @@ const Home = () => {
     pt: {
       title: "Porto Betarello | Aluguel de Refúgios em Florianópolis e São Paulo",
       description:
-        "Refúgios da família Betarello para suas férias. Casas e apartamentos premium em Florianópolis, Praia do Rosa e interior de São Paulo.",
+        "Casas e apartamentos confortáveis e aconchegantes da família Betarello em Florianópolis e interior de São Paulo. Sinta-se em casa nas suas férias.",
     },
     en: {
       title: "Porto Betarello | Vacation Rentals in Florianópolis and São Paulo",
       description:
-        "Retreats by the Betarello family for your vacation. Premium houses and apartments in Florianópolis, Rosa Beach and São Paulo countryside.",
+        "Comfortable, cozy houses and apartments by the Betarello family in Florianópolis and São Paulo countryside. Feel at home on your vacation.",
     },
   }[language];
 
