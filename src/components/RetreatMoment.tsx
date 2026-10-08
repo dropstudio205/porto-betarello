@@ -4,11 +4,9 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import poster from '@/assets/gallery-2.jpg';
+import retreatVideo from '@/assets/videos/retreat-moment.mp4.asset.json';
 
-// A local file named retreat-moment.mp4 or retreat-moment.webm in src/assets
-// automatically replaces the preview image without changing this section.
-const localVideos = import.meta.glob('../assets/retreat-moment.{mp4,webm}', { eager: true, query: '?url', import: 'default' }) as Record<string, string>;
-const localVideo = Object.values(localVideos)[0];
+const localVideo = retreatVideo.url;
 
 const RetreatMoment = () => {
   const { language } = useLanguage();

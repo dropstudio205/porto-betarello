@@ -1,6 +1,18 @@
 import { describe, expect, test } from 'bun:test';
 import { getRetreatBySlug } from './retreats';
 
+describe('Confirmed Amparo map addresses', () => {
+  test('Casa do Interior points to Rua Dr. Osvaldo Cruz, 482 in Centro, Amparo/SP', () => {
+    expect(getRetreatBySlug('casa-do-interior')?.mapQuery).toBe('Rua Dr. Osvaldo Cruz, 482, Centro, Amparo, SP, Brasil');
+  });
+  test('Casa da Lira points to Rua Washington Luis, 193 in Centro, Amparo/SP', () => {
+    expect(getRetreatBySlug('casa-da-lira')?.mapQuery).toBe('Rua Washington Luis, 193, Centro, Amparo, SP, Brasil');
+  });
+  test('Flor da Montanha points to Rua Benjamin Constant, 245 in Centro, Amparo/SP', () => {
+    expect(getRetreatBySlug('flor-da-montanha')?.mapQuery).toBe('Rua Benjamin Constant, 245, Centro, Amparo, SP, Brasil');
+  });
+});
+
 describe('US retreat previews', () => {
   test('Indianápolis has confirmed details and ten uploaded photos', () => {
     const retreat = getRetreatBySlug('casa-indianapolis');
