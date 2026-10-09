@@ -5,6 +5,13 @@ import { MapPin, Sparkles, Hand, Leaf, Heart, Instagram } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 
+import restauranteGuardiao from '@/assets/restaurante-guardiao.jpg';
+import bistro from '@/assets/bistro.jpeg';
+import rio from '@/assets/rio_rastro.jpg';
+import dolmen from '@/assets/Dolmen_oracao.webp';
+import trilha from '@/assets/trilha-pedras.jpg';
+import vale from '@/assets/vale_utopia.jpg';
+
 type Category = 'all' | 'trail' | 'food' | 'tourism';
 
 const fadeUp = {
@@ -72,7 +79,7 @@ const Dicas = () => {
   const tips = [
     {
       cat: 'trail' as const,
-      img: 'https://images.unsplash.com/photo-1551632811-561732d1e306?w=900&q=80',
+      img: vale,
       location: { pt: 'Guarda do Embaú, SC', en: 'Guarda do Embaú, SC' },
       title: { pt: 'Vale da Utopia — Guarda do Embaú', en: 'Vale da Utopia — Guarda do Embaú' },
       desc: {
@@ -82,7 +89,7 @@ const Dicas = () => {
     },
     {
       cat: 'trail' as const,
-      img: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=900&q=80',
+      img: trilha,
       location: { pt: 'Praia do Rosa, SC', en: 'Praia do Rosa, SC' },
       title: { pt: 'Trilha do Morro das Pedras', en: 'Morro das Pedras Trail' },
       desc: {
@@ -92,7 +99,7 @@ const Dicas = () => {
     },
     {
       cat: 'food' as const,
-      img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80',
+      img: restauranteGuardiao,
       location: { pt: 'Palhoça, SC', en: 'Palhoça, SC' },
       title: { pt: 'Restaurante Guardião', en: 'Restaurante Guardião' },
       desc: {
@@ -102,7 +109,7 @@ const Dicas = () => {
     },
     {
       cat: 'trail' as const,
-      img: 'https://images.unsplash.com/photo-1542401886-65d6c61db217?w=900&q=80',
+      img: dolmen,
       location: { pt: 'Ponta do Caçador, SC', en: 'Ponta do Caçador, SC' },
       title: { pt: 'Dólmen da Oração', en: 'Dólmen da Oração' },
       desc: {
@@ -112,7 +119,7 @@ const Dicas = () => {
     },
     {
       cat: 'tourism' as const,
-      img: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=900&q=80',
+      img: rio,
       location: { pt: 'Bom Jardim da Serra / Lauro Müller, SC', en: 'Bom Jardim da Serra / Lauro Müller, SC' },
       title: { pt: 'Serra do Rio do Rastro', en: 'Serra do Rio do Rastro' },
       desc: {
@@ -122,7 +129,7 @@ const Dicas = () => {
     },
     {
       cat: 'food' as const,
-      img: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=80',
+      img: bistro,
       location: { pt: 'Praia do Rosa, Imbituba, SC', en: 'Praia do Rosa, Imbituba, SC' },
       title: { pt: 'Bistrô Pedra da Vigia', en: 'Pedra da Vigia Bistro' },
       desc: {

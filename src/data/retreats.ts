@@ -332,7 +332,7 @@ export const retreats: Retreat[] = [
     name: 'Casa Indianápolis',
     location: 'Indianápolis – EUA',
     mapQuery: 'Indianapolis, Indiana, USA',
-    rooms: 2, baths: 1,
+    rooms: 2, baths: 2,
     images: [indianapolis1.url, indianapolis2.url, indianapolis3.url, indianapolis4.url, indianapolis5.url, indianapolis6.url, indianapolis7.url, indianapolis8.url, indianapolis9.url, indianapolis10.url],
     furnishedFinderUrl: 'https://www.furnishedfinder.com/property/874692_1?moveDate=%7B%22in%22%3A%222026-12-20%22%7D',
     contactPhone: US_PHONE,

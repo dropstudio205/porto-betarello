@@ -14,12 +14,12 @@ const FeedbackSection = () => {
     {
       quoteKey: 'feedback.t2.quote',
       authorKey: 'feedback.t2.author',
-      locationKey: 'feedback.t2.location',
+      locationKey: 'feedback.t1.location',
     },
     {
       quoteKey: 'feedback.t3.quote',
       authorKey: 'feedback.t3.author',
-      locationKey: 'feedback.t3.location',
+      locationKey: 'feedback.t1.location',
     },
   ];
 

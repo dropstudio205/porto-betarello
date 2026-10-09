@@ -88,16 +88,16 @@ export const translations: Translations = {
   },
   'feedback.t1.location': { pt: 'Palhoça', en: 'Palhoça' },
   'feedback.t2.quote': {
-    pt: 'Lugar perfeito para descansar com a família. Cada detalhe foi pensado com carinho, e a vista é simplesmente espetacular.',
-    en: 'A perfect place to rest with the family. Every detail was carefully thought through, and the view is simply spectacular.',
+    pt: 'O apartamento é novinho e impecável, tem farmácia no térreo e supermercado ao lado.',
+    en: 'The apartment is brand new and immaculate, with a pharmacy on the ground floor and a supermarket right next door.',
   },
-  'feedback.t2.author': { pt: 'Família hóspede', en: 'Guest family' },
+  'feedback.t2.author': { pt: 'Ana Maria', en: 'Ana Maria' },
   'feedback.t2.location': { pt: 'Verão no Sul do Brasil', en: 'Summer in Southern Brazil' },
   'feedback.t3.quote': {
-    pt: 'Uma experiência que renova. Voltamos descansados, com memórias que vamos guardar para sempre.',
-    en: 'A truly renewing experience. We came back rested, with memories we will keep forever.',
+    pt: 'O apartamento estava extremamente limpo, tudo novinho. A Fabiana foi muito gentil e deixou um mimo para nossa chegada. Adoramos a estadia!',
+    en: 'The apartment was spotlessly clean, and everything was brand new. Fabiana was very kind and left us a lovely welcome gift. We absolutely loved our stay!',
   },
-  'feedback.t3.author': { pt: 'Família hóspede', en: 'Guest family' },
+  'feedback.t3.author': { pt: 'Francieli', en: 'Francieli' },
   'feedback.t3.location': { pt: 'Verão no Sul do Brasil', en: 'Summer in Southern Brazil' },
 
   // Story page
